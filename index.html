@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/favicon.ico">
     <title>Wenti.MiM | Montaż Wentylacji i Rekuperacji z Odzyskiem Ciepła</title>
-    <link rel="stylesheet" href="./sass/style.scss">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
-<script src="./js/script.js"></script> 
+    <nav class="nav">
+        <div class="wrapper">
+            <a href="/" aria-label="Logo strony" class="nav__logo">
+                <img class="nav__logo-img" src="./images/svg/WentiMiM-logo.svg" alt="Logo firmy Wenti MiM">
+            </a>
+            <div class="nav__contact">
+                <a href="tel:+48574682800" aria-label="Kontakt telefoniczny" class="nav__contact-link">
+                    <img class="nav__contact-icon" src="./images/svg/phone-solid.svg" alt="">
+                </a>
+                <span class="nav__contact-link-span">574 682 800</span>
+                <div class="nav__divider"></div>
+                <a href="mailto:wenti.mim@gmail.com" aria-label="Kontakt pocztowy" class="nav__contact-link">
+                    <img class="nav__contact-icon" src="./images/svg/envelope-solid.svg" alt="">
+                </a>
+                <span class="nav__contact-link-span">wenti.mim@gmail.com</span>
+            </div>
+            <a target="_blank" rel="noopener" aria-label="Opinie google"
+                href="https://www.google.com/search?client=opera-gx&hs=FVz&sca_esv=a55453b1a2e256c7&sxsrf=AE3TifPthv6t8drv5kDDN8iMq7t5bLCakQ:1749068948129&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EwvgnjJb51rroWUpdzgccgZQBJ65fnVwPBcpBHlAdDE14a-S8PzveGnuvOzf9pL9AfCubotu5iGS9jp89WvC3KpXnX5HV9wQQo0EXtR1vROS5NtzdOxFF8Kb0DZ3UZ86OcyTUfo2IltU4nMzsfYNqoI8tORN&q=Wenti.mim+Mateusz+Nigbór+Rekuperacja+Klimatyzacja+wod-kan+Opinie&sa=X&ved=2ahUKEwin6NzKzdiNAxVHIhAIHViDAGkQ0bkNegQIOxAE&biw=1495&bih=716&dpr=1.25"
+                class="nav__reviews">
+                <img class="nav__reviews-img" src="./images/webp/google-reviews-logo.webp" alt="">
+            </a>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__content">
+                <h1 class="header__title">
+                    Wenti.MiM.
+                    <span class="header__title">Oddychaj</span>
+                    <span class="header__title">Świeżością</span>
+                </h1>
+                <p class="header__info">Montaż rekuperacji z odzyskiem ciepła,
+                    wentylacji grawitacyjnych, przemysłowych i klimatyzacji. Sprzedaż materiałów do samodzielnego
+                    montażu
+                </p>
+                <a href="#oferty" class="header__cta">Zobacz ofertę <img src="./images/svg/arrow-right-solid.svg" alt=""
+                        class="header__cta-icon header__cta-icon--arrow"></a>
+                <a href="#opinie" class="header__reviews-btn">Opinie <img src="./images/svg/message-square.svg" alt=""
+                        class="header__cta-icon header__cta-icon--message"></a>
+            </div>
+            <div class="header__hero">
+                <img src="./images/webp/hero-img.webp" alt="" class="header__img">
+            </div>
+        </div>
+    </header>
+
+    <script src="./js/script.js"></script>
 </body>
+
 </html>

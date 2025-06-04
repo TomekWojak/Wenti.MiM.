@@ -1,3 +1,6 @@
+@use "./_animations" as *;
+@use "./_components" as *;
+@use "./_fontface" as *;
 *,
 *::before,
 *::after {
@@ -8,6 +11,7 @@
 
 :root {
 	--pureWhite: #fff;
+	--pureBlack: #000;
 	--lighterWhite: #f0f9ff;
 	--silver: #e0f2fe;
 	--contactDark: #1a2a6c;
@@ -23,7 +27,9 @@
 	--lightTextGradient: linear-gradient(90deg, #bfdbfe, #ffffff);
 	--darkTextGradient: linear-gradient(90deg, #7a92a9, #4b5d70);
 }
-
+html {
+	font-size: 62.5%;
+}
 input,
 button,
 textarea,
@@ -36,10 +42,195 @@ select {
 	margin: 0;
 	outline: none;
 }
+body {
+	font-family: "Montserrat", sans-serif;
+}
 
-img {
-	max-width: 100%;
-	height: auto;
-	display: block;
-	font-style: italic;
+// NAV
+
+.nav {
+	position: relative;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+	z-index: 100;
+	.wrapper {
+		padding: 0.8em 2em;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		text-decoration: none;
+	}
+	&__logo-img {
+		width: 75px;
+	}
+	&__contact {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1em;
+	}
+	&__divider {
+		height: 15px;
+		width: 1px;
+		background-color: var(--pureBlack);
+	}
+	&__contact-link {
+		display: inline-flex;
+		align-items: center;
+		text-decoration: none;
+		color: var(--pureBlack);
+	}
+	&__contact-icon {
+		width: 15px;
+	}
+	&__contact-link-span {
+		display: none;
+	}
+	&__reviews {
+		text-decoration: none;
+	}
+	&__reviews-img {
+		width: 35px;
+	}
+}
+
+// HEADER
+.header {
+	background: linear-gradient(180deg, var(--lightBLue), var(--purple) 80%);
+	overflow: hidden;
+	&__content {
+		padding: 5em 2em;
+	}
+	&__hero {
+		display: none;
+	}
+	&__title {
+		font-size: clamp(4.3rem, 12vw, 7rem);
+		line-height: 140%;
+		font-weight: 800;
+		background: var(--lightTextGradient);
+		background-clip: text;
+		max-width: 500px;
+		color: transparent;
+	}
+	&__info {
+		margin-block-start: 1em;
+		color: rgba(255, 255, 255, 0.8);
+		line-height: 150%;
+		font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+		max-width: 500px;
+	}
+	&__cta,
+	&__reviews-btn {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		margin-block-start: 2em;
+		padding: 1.5em;
+		color: var(--pureWhite);
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+		font-size: clamp(1rem, 2vw, 1.2rem);
+		font-weight: 500;
+		border-radius: 2px;
+		letter-spacing: 0.5px;
+		text-decoration: none;
+		transition: background 0.6s 0.1s, transform 0.3s, box-shadow 0.3s;
+	}
+	&__cta {
+		background: linear-gradient(90deg, var(--btnBLue), var(--btnPurple) 80%);
+
+		&:hover {
+			transform: translateY(-3px);
+			background-size: 250%;
+			background-position: right center;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+		}
+		&:hover .header__cta-icon--arrow {
+			transform: translateX(2px);
+		}
+	}
+	&__reviews-btn {
+		margin-inline-start: 0.8em;
+		background-color: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(10px);
+
+		&:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+			background-color: rgba(255, 255, 255, 0.15);
+		}
+	}
+	&__cta-icon {
+		display: inline-block;
+		width: 10px;
+		margin-inline-start: 0.5em;
+		vertical-align: middle;
+		transition: transform 0.3s 0.1s;
+	}
+}
+
+// MEDIA
+
+@media (576px <= width) {
+	.nav {
+		&__contact-link-span {
+			display: inline-block;
+			font-size: 1.3rem;
+		}
+	}
+}
+@media (900px <= width) {
+	.header {
+		.wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__hero {
+			position: relative;
+			display: block;
+			width: 92%;
+			max-width: 600px;
+			height: 100%;
+		}
+		&__hero {
+			padding: 5em 2em;
+		}
+		&__content {
+			width: 100%;
+		}
+		&__img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -45%);
+			width: 100%;
+		}
+	}
+}
+@media (992px <= width) {
+	.nav {
+		&__logo-img {
+			width: 90px;
+		}
+		&__reviews-img {
+			width: 50px;
+		}
+	}
+}
+@media (1100px <= width) {
+	.nav {
+		.wrapper {
+			padding: 0.8em 4em;
+		}
+	}
+	.header {
+		&__content,
+		&__hero {
+			padding: 5em 4em;
+		}
+	}
 }
