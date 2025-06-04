@@ -29,6 +29,7 @@
 }
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 input,
 button,
@@ -100,6 +101,7 @@ body {
 .header {
 	background: linear-gradient(180deg, var(--lightBLue), var(--purple) 80%);
 	overflow: hidden;
+	overflow: hidden;
 	&__content {
 		padding: 5em 2em;
 	}
@@ -142,7 +144,7 @@ body {
 		background: linear-gradient(90deg, var(--btnBLue), var(--btnPurple) 80%);
 
 		&:hover {
-			transform: translateY(-3px);
+			transform: translateY(-1px);
 			background-size: 250%;
 			background-position: right center;
 			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -157,7 +159,7 @@ body {
 		backdrop-filter: blur(10px);
 
 		&:hover {
-			transform: translateY(-3px);
+			transform: translateY(-1px);
 			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 			background-color: rgba(255, 255, 255, 0.15);
 		}
@@ -168,6 +170,20 @@ body {
 		margin-inline-start: 0.5em;
 		vertical-align: middle;
 		transition: transform 0.3s 0.1s;
+	}
+}
+
+// OFFERS SECTION
+
+.offers {
+	position: relative;
+	z-index: 0;
+
+	&__top-bg {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
 	}
 }
 
@@ -209,6 +225,31 @@ body {
 			transform: translate(-50%, -45%);
 			width: 100%;
 		}
+		&__cta,
+		&__reviews-btn {
+			position: relative;
+			overflow: hidden;
+
+			&::before {
+				content: "";
+				position: absolute;
+				width: 10px;
+				height: 150%;
+				background: linear-gradient(
+					120deg,
+					rgba(255, 255, 255, 0) 0%,
+					rgba(255, 255, 255, 0.5) 50%,
+					rgba(255, 255, 255, 0) 100%
+				);
+				left: -20%;
+				top: -45%;
+				transform: rotate(20deg);
+				transition: left 0.2s 0.1s;
+			}
+			&:hover::before {
+				left: 120%;
+			}
+		}
 	}
 }
 @media (992px <= width) {
@@ -218,6 +259,15 @@ body {
 		}
 		&__reviews-img {
 			width: 50px;
+		}
+	}
+	.offers {
+		position: relative;
+
+		&__top-bg {
+			top: -10%;
+			width: 100%;
+			position: absolute;
 		}
 	}
 }
