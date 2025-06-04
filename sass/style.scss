@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--pureWhite: #fff;
+	--lighterWhite: #f0f9ff;
+	--silver: #e0f2fe;
+	--contactDark: #1a2a6c;
+	--contactLight: #1e3a8a;
+	--footerColor: #1f2937;
+	--graphite: #4b5d70;
+	--lightBLue: #007bff;
+	--btnBLue: #3b82f6;
+	--btnPurple: #8b5cf6;
+	--purple: #6f42c1;
+	--accentBlue: #007acc;
+	--lightPurple: #5c7aea;
+	--lightTextGradient: linear-gradient(90deg, #bfdbfe, #ffffff);
+	--darkTextGradient: linear-gradient(90deg, #7a92a9, #4b5d70);
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	color: inherit;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	font-style: italic;
+}
