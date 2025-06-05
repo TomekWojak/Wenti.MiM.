@@ -11,31 +11,35 @@
 
 <body>
 
-    <nav class="nav">
-        <div class="wrapper">
-            <a href="/" aria-label="Logo strony" class="nav__logo">
-                <img class="nav__logo-img" src="./images/svg/WentiMiM-logo.svg" alt="Logo firmy Wenti MiM">
-            </a>
-            <div class="nav__contact">
-                <a href="tel:+48574682800" aria-label="Kontakt telefoniczny" class="nav__contact-link">
-                    <img class="nav__contact-icon" src="./images/svg/phone-solid.svg" alt="">
-                </a>
-                <span class="nav__contact-link-span">574 682 800</span>
-                <div class="nav__divider"></div>
-                <a href="mailto:wenti.mim@gmail.com" aria-label="Kontakt pocztowy" class="nav__contact-link">
-                    <img class="nav__contact-icon" src="./images/svg/envelope-solid.svg" alt="">
-                </a>
-                <span class="nav__contact-link-span">wenti.mim@gmail.com</span>
-            </div>
-            <a target="_blank" rel="noopener" aria-label="Opinie google"
-                href="https://www.google.com/search?client=opera-gx&hs=FVz&sca_esv=a55453b1a2e256c7&sxsrf=AE3TifPthv6t8drv5kDDN8iMq7t5bLCakQ:1749068948129&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EwvgnjJb51rroWUpdzgccgZQBJ65fnVwPBcpBHlAdDE14a-S8PzveGnuvOzf9pL9AfCubotu5iGS9jp89WvC3KpXnX5HV9wQQo0EXtR1vROS5NtzdOxFF8Kb0DZ3UZ86OcyTUfo2IltU4nMzsfYNqoI8tORN&q=Wenti.mim+Mateusz+Nigbór+Rekuperacja+Klimatyzacja+wod-kan+Opinie&sa=X&ved=2ahUKEwin6NzKzdiNAxVHIhAIHViDAGkQ0bkNegQIOxAE&biw=1495&bih=716&dpr=1.25"
-                class="nav__reviews">
-                <img class="nav__reviews-img" src="./images/webp/google-reviews-logo.webp" alt="">
-            </a>
-        </div>
-    </nav>
 
     <header class="header">
+        <div class="header-top-content">
+            <div class="header-top-content-wrapper">
+                <a href="/" aria-label="Logo strony" class="header__logo">
+                    <img width="75" height="37" class="header__logo-img" src="./images/svg/WentiMiM-logo.svg"
+                        alt="Logo firmy Wenti MiM">
+                </a>
+                <div class="header__contact">
+                    <a href="tel:+48574682800" aria-label="Kontakt telefoniczny" class="header__contact-link">
+                        <img width="15" height="15" class="header__contact-icon" src="./images/svg/phone-solid.svg"
+                            alt="">
+                    </a>
+                    <span class="header__contact-link-span">574 682 800</span>
+                    <div class="header__divider"></div>
+                    <a href="mailto:wenti.mim@gmail.com" aria-label="Kontakt pocztowy" class="header__contact-link">
+                        <img width="15" height="15" class="header__contact-icon" src="./images/svg/envelope-solid.svg"
+                            alt="">
+                    </a>
+                    <span class="header__contact-link-span">wenti.mim@gmail.com</span>
+                </div>
+                <a target="_blank" rel="noopener" aria-label="Opinie google"
+                    href="https://www.google.com/search?client=opera-gx&hs=FVz&sca_esv=a55453b1a2e256c7&sxsrf=AE3TifPthv6t8drv5kDDN8iMq7t5bLCakQ:1749068948129&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EwvgnjJb51rroWUpdzgccgZQBJ65fnVwPBcpBHlAdDE14a-S8PzveGnuvOzf9pL9AfCubotu5iGS9jp89WvC3KpXnX5HV9wQQo0EXtR1vROS5NtzdOxFF8Kb0DZ3UZ86OcyTUfo2IltU4nMzsfYNqoI8tORN&q=Wenti.mim+Mateusz+Nigbór+Rekuperacja+Klimatyzacja+wod-kan+Opinie&sa=X&ved=2ahUKEwin6NzKzdiNAxVHIhAIHViDAGkQ0bkNegQIOxAE&biw=1495&bih=716&dpr=1.25"
+                    class="header__reviews">
+                    <img width="100" height="100" class="header__reviews-img"
+                        src="./images/webp/google-reviews-logo.webp" alt="">
+                </a>
+            </div>
+        </div>
         <div class="wrapper">
             <div class="header__content">
                 <h1 class="header__title">
@@ -47,20 +51,22 @@
                     wentylacji grawitacyjnych, przemysłowych i klimatyzacji. Sprzedaż materiałów do samodzielnego
                     montażu
                 </p>
-                <a href="#oferty" class="header__cta">Zobacz ofertę <img src="./images/svg/arrow-right-solid.svg" alt=""
+                <a href="#oferty" class="header__cta">Zobacz ofertę <img width="10" height="11"
+                        src="./images/svg/arrow-right-solid.svg" alt=""
                         class="header__cta-icon header__cta-icon--arrow"></a>
-                <a href="#opinie" class="header__reviews-btn">Opinie <img src="./images/svg/message-square.svg" alt=""
+                <a href="#opinie" class="header__reviews-btn">Opinie <img width="10" height="10"
+                        src="./images/svg/message-square.svg" alt=""
                         class="header__cta-icon header__cta-icon--message"></a>
             </div>
             <div class="header__hero">
-                <img src="./images/webp/hero-img.webp" alt="" class="header__img">
+                <img width="1245" height="1280" src="./images/webp/hero-img.webp" alt="" class="header__img">
             </div>
         </div>
     </header>
 
     <main>
         <section class="offers" id="oferty">
-            <img src="./images/svg/offers-top-bg.svg" alt="" class="offers__top-bg">
+            <img loading="lazy" src="./images/svg/offers-top-bg.svg" alt="" class="offers__top-bg">
             <div class="offers__content wrapper">
                 <div class="offers__header">
                     <div class="offers__header-heading">
@@ -69,15 +75,15 @@
                     </div>
                     <div class="offers__header-icons">
                         <div class="offers__header-icon-bg offers__header-icon-bg--blue">
-                            <img src="./images/svg/hammer-icon.svg" alt=""
+                            <img loading="lazy" src="./images/svg/hammer-icon.svg" alt=""
                                 class="offers__header-icon offers__header-icon--hammer">
                         </div>
                         <div class="offers__header-icon-bg offers__header-icon-bg--green">
-                            <img src="./images/svg/toolbox-icon.svg" alt=""
+                            <img loading="lazy" src="./images/svg/toolbox-icon.svg" alt=""
                                 class="offers__header-icon offers__header-icon--toolbox">
                         </div>
                         <div class="offers__header-icon-bg offers__header-icon-bg--red">
-                            <img src="./images/svg/wrench-icon.svg" alt=""
+                            <img loading="lazy" src="./images/svg/wrench-icon.svg" alt=""
                                 class="offers__header-icon offers__header-icon--wrench">
                         </div>
                     </div>
@@ -88,9 +94,81 @@
                         branży wentylacyjnej, oferując profesjonalne doradztwo, konkurencyjne ceny i szybkie terminy
                         realizacji. Stawiamy na indywidualne podejście do każdego klienta, solidność wykonania oraz
                         nowoczesne rozwiązania, które gwarantują komfort i oszczędność przez lata.</p>
+
+                    <h3 class="offers__subtitle">Nasz zakres usług obejmuje między innymi</h3>
+                    <ul class="offers__list">
+                        <li class="offers__li"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="#007ACC" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-check">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Montaż rekuperacji z odzyskiem ciepła</li>
+                        <li class="offers__li"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="#007ACC" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-check">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Montaż wentylacji grawitacyjnej</li>
+                        <li class="offers__li"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="#007ACC" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-check">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Montaż wentylacji przemysłowej</li>
+                        <li class="offers__li"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="#007ACC" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-check">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Montaż klimatyzacji</li>
+                        <li class="offers__li"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="#007ACC" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-check">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Wiercenie otworów</li>
+                        <li class="offers__li"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="#007ACC" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-check">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Montaż wentylacji przemysłowej</li>
+                        <li class="offers__li"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="#007ACC" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-check">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Sprzedaż materiałów do samodzielnego montażu rekuperacji i wentylacji</li>
+                        <li class="offers__li"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="#007ACC" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-check">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg> Montaż instalacji wodno kanalizacyjnych</li>
+                    </ul>
+                    <p class="offers__text">Dzięki naszemu zaangażowaniu i fachowej wiedzy możesz mieć pewność, że Twoja
+                        instalacja wentylacyjna będzie działać niezawodnie i wydajnie.</p>
+                    <span class="offers__bold">Zaufaj firmie, która łączy tradycję z innowacją. </span>
+                    <span class="offers__bold">Wenti.MiM – oddychaj pełną piersią, a resztę zostaw nam.</span>
+                    <div class="blue-line"></div>
                 </div>
             </div>
         </section>
+        <nav class="nav wrapper">
+            <a href="klimatyzacja.html" class="nav__link">
+                <div class="nav__link-img nav__link-img-conditioning"></div>
+                <div class="nav__link-info">
+                    <p class="nav__link-info-text">Klimatyzacja <img width="10" height="11" loading="lazy"
+                            src="./images/svg/arrow-right-black.svg" alt="" class="nav__link-arrow"></p>
+                </div>
+            </a>
+            <a href="rekuperacja.html" class="nav__link">
+                <div class="nav__link-img nav__link-img-recuperation"></div>
+                <div class="nav__link-info">
+                    <p class="nav__link-info-text">Rekuperacja <img width="10" height="11" loading="lazy"
+                            src="./images/svg/arrow-right-black.svg" alt="" class="nav__link-arrow"></p>
+                </div>
+            </a>
+            <a href="wodkan.html" class="nav__link">
+                <div class="nav__link-img nav__link-img-wodkan"></div>
+                <div class="nav__link-info">
+                    <p class="nav__link-info-text">Wod–kan <img width="10" height="11" loading="lazy"
+                            src="./images/svg/arrow-right-black.svg" alt="" class="nav__link-arrow"></p>
+                </div>
+            </a>
+        </nav>
     </main>
     <script src="./js/script.js"></script>
 </body>
