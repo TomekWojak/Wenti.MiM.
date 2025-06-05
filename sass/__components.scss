@@ -1,11 +1,18 @@
 .wrapper {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 .blue-line {
-    margin: 2em 0;
-    width: 80px;
-    height: 1px;
-    background-color: var(--accentBlue);
+	margin: 2em 0;
+	width: 80px;
+	height: 1px;
+	background-color: var(--accentBlue);
+}
+.section-divider {
+	position: absolute;
+	inset-inline: 0;
+	width: 100%;
+	height: auto;
+	z-index: -1;
 }
