@@ -16,3 +16,66 @@
 	height: auto;
 	z-index: -1;
 }
+
+.facebook-link {
+	width: 60px;
+	padding: 0.8em;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	right: -26px;
+	background-color: var(--accentBlue);
+	text-decoration: none;
+	transition: transform 0.3s;
+
+	svg {
+		width: 18px;
+		height: 18px;
+	}
+}
+.facebook-link:hover {
+	transform: translate(-15px, -50%);
+}
+
+@mixin ctaBtn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-block-start: 2em;
+	padding: 1.5em;
+	color: var(--pureWhite);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	font-size: clamp(1rem, 2vw, 1.2rem);
+	font-weight: 500;
+	border-radius: 2px;
+	letter-spacing: 0.5px;
+	text-decoration: none;
+	will-change: transform;
+	transition: background 0.6s 0.1s, transform 0.3s, box-shadow 0.3s;
+}
+@mixin btnShiningElement {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 150%;
+	background: linear-gradient(
+		120deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 0.5) 50%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	left: -20%;
+	top: -45%;
+	transform: rotate(20deg);
+}
+
+@media (992px <= width) {
+	.facebook-link {
+		right: -22px;
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}

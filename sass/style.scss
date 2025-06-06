@@ -27,6 +27,7 @@
 	--lightTextGradient: linear-gradient(90deg, #bfdbfe, #ffffff);
 	--darkTextGradient: linear-gradient(90deg, #7a92a9, #4b5d70);
 	--normalTextSize: clamp(1.2rem, 2.6vw, 1.4rem);
+	--bigTextSize: clamp(4rem, 12vw, 6.5rem);
 }
 html {
 	font-size: 62.5%;
@@ -45,9 +46,13 @@ select {
 	outline: none;
 }
 body {
+	position: relative;
 	font-family: "Montserrat", sans-serif;
+	overflow-x: hidden;
 }
-
+section {
+	scroll-margin-top: -90px;
+}
 // HEADER
 .header {
 	background: linear-gradient(180deg, var(--lightBLue), var(--purple) 80%);
@@ -129,20 +134,7 @@ body {
 	}
 	&__cta,
 	&__reviews-btn {
-		display: inline-flex;
-		justify-content: center;
-		align-items: center;
-		margin-block-start: 2em;
-		padding: 1.5em;
-		color: var(--pureWhite);
-		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-		font-size: clamp(1rem, 2vw, 1.2rem);
-		font-weight: 500;
-		border-radius: 2px;
-		letter-spacing: 0.5px;
-		text-decoration: none;
-		will-change: transform;
-		transition: background 0.6s 0.1s, transform 0.3s, box-shadow 0.3s;
+		@include ctaBtn;
 	}
 	&__cta {
 		background: linear-gradient(90deg, var(--btnBLue), var(--btnPurple) 80%);
@@ -316,6 +308,12 @@ body {
 	padding: 2em;
 	background: linear-gradient(180deg, var(--lightPurple), var(--lightBLue));
 
+	&__stats {
+		padding: 4em;
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+	}
 	&__stats-box {
 		position: relative;
 		display: flex;
@@ -326,14 +324,15 @@ body {
 		text-align: center;
 	}
 	&__stats-stat {
-		font-size: clamp(6rem, 10vw, 8rem);
+		font-size: clamp(6rem, 10vw, 10rem);
 		font-weight: 900;
 		background: var(--lightTextGradient);
 		background-clip: text;
 		color: transparent;
+		letter-spacing: 3px;
 	}
 	&__stats-info {
-		font-size: clamp(1.4rem, 2.4vw, 1.6rem);
+		font-size: clamp(1.4rem, 2.4vw, 1.7rem);
 		font-weight: 700;
 		color: #ffffffd6;
 	}
@@ -350,12 +349,21 @@ body {
 // GALLERY SECTION
 
 .gallery {
-	padding: 8em 2em;
+	padding: 10em 2em;
 	background: linear-gradient(
 		180deg,
 		var(--lightBLue),
-		var(--lighterWhite) 55%
+		var(--lighterWhite) 70%
 	);
+	&__title {
+		margin-block-end: 1em;
+		font-size: var(--bigTextSize);
+		font-weight: 800;
+		text-align: center;
+		background: var(--lightTextGradient);
+		background-clip: text;
+		color: transparent;
+	}
 	&__content {
 		width: 90%;
 		max-width: 380px;
@@ -381,8 +389,15 @@ body {
 
 // REVIEWS SECTION
 .reviews {
-	padding: 8em 2em;
+	position: relative;
+	padding: 8em 2em 12em;
 	background: linear-gradient(180deg, var(--lighterWhite), var(--silver));
+	z-index: 0;
+
+	.reviews-bottom-bg {
+		bottom: -5px;
+		transform: rotate(180deg);
+	}
 	&__title {
 		margin-block-end: 1em;
 		text-align: center;
@@ -431,6 +446,51 @@ body {
 	}
 }
 
+// CONTACT SECTION
+
+.contact {
+	padding: 6em 2em;
+	background: linear-gradient(180deg, var(--contactDark), var(--contactLight));
+
+	&__title {
+		font-size: var(--bigTextSize);
+		font-weight: 800;
+		background: var(--lightTextGradient);
+		background-clip: text;
+		color: transparent;
+	}
+	&__info {
+		margin-block-start: 1em;
+		font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+		color: rgba(255, 255, 255, 0.8);
+		line-height: 150%;
+		max-width: 500px;
+		min-height: 70px;
+	}
+	&__btn {
+		@include ctaBtn;
+		background: linear-gradient(90deg, var(--btnBLue), var(--btnPurple) 80%);
+		margin-block-start: 1em;
+
+		&:hover {
+			transform: translateY(-1px);
+			background-size: 250%;
+			background-position: right center;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+		}
+		&:hover .contact__cta-arrow {
+			transform: translateX(2px);
+		}
+	}
+	&__cta-arrow {
+		display: inline-block;
+		width: 10px;
+		margin-inline-start: 0.5em;
+		vertical-align: middle;
+		transition: transform 0.3s 0.1s;
+	}
+}
+
 // MEDIA
 
 @media (576px <= width) {
@@ -452,11 +512,14 @@ body {
 		}
 	}
 	.gallery {
-		padding: 12em 2em;
+		padding: 15em 2em;
 		&__content {
 			width: 80%;
 			max-width: 420px;
 		}
+	}
+	.reviews {
+		padding: 8em 2em 18em;
 	}
 }
 @media (768px <= width) {
@@ -547,19 +610,29 @@ body {
 		}
 	}
 	.gallery {
-		padding: 15em 2em;
+		padding: 18em 2em;
 		&__content {
 			max-width: 500px;
 		}
 	}
 	.reviews {
+		padding: 8em 2em 20em;
 		&__box {
 			width: 100%;
 			margin: 0 auto;
 		}
 	}
+	.contact {
+		padding: 6em 4em;
+	}
 }
 @media (800px <= width) {
+	.counter {
+		&__stats {
+			padding: 4em;
+			gap: 7em;
+		}
+	}
 	.reviews {
 		&__reviews {
 			justify-content: space-between;
@@ -606,19 +679,7 @@ body {
 			overflow: hidden;
 
 			&::before {
-				content: "";
-				position: absolute;
-				width: 10px;
-				height: 150%;
-				background: linear-gradient(
-					120deg,
-					rgba(255, 255, 255, 0) 0%,
-					rgba(255, 255, 255, 0.5) 50%,
-					rgba(255, 255, 255, 0) 100%
-				);
-				left: -20%;
-				top: -45%;
-				transform: rotate(20deg);
+				@include btnShiningElement;
 			}
 			&:hover::before {
 				animation: left 0.4s 0.1s forwards;
@@ -705,14 +766,16 @@ body {
 	}
 	.counter {
 		&__stats {
-			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
-			gap: 20em;
+			gap: 15em;
 		}
 	}
 	.gallery {
+		&__title {
+			margin-block-end: 2em;
+		}
 		&__content {
 			width: 100%;
 			max-width: 1200px;
@@ -726,7 +789,20 @@ body {
 		}
 		&__img.active {
 			transform: scale(1);
-			filter: brightness(0.9);
+			filter: brightness(1);
+		}
+	}
+	.contact {
+		&__btn {
+			position: relative;
+			overflow: hidden;
+
+			&::before {
+				@include btnShiningElement;
+			}
+			&:hover::before {
+				animation: left 0.5s 0.1s forwards;
+			}
 		}
 	}
 }
@@ -741,7 +817,7 @@ body {
 		}
 		&__content,
 		&__hero {
-			padding: 8em 2em;
+			padding: 8em 4em;
 		}
 	}
 
@@ -765,6 +841,9 @@ body {
 			font-size: 1.1rem;
 		}
 	}
+	.gallery {
+		padding: 25em 2em 20em;
+	}
 }
 @media (1100px <= width) {
 	.header {
@@ -780,5 +859,8 @@ body {
 		&__content {
 			padding: 0 4em;
 		}
+	}
+	.reviews {
+		padding: 8em 2em 25em;
 	}
 }

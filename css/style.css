@@ -75,6 +75,35 @@
   z-index: -1;
 }
 
+.facebook-link {
+  width: 60px;
+  padding: 0.8em;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -26px;
+  background-color: var(--accentBlue);
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+.facebook-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.facebook-link:hover {
+  transform: translate(-15px, -50%);
+}
+
+@media (992px <= width) {
+  .facebook-link {
+    right: -22px;
+  }
+  .facebook-link svg {
+    width: 20px;
+    height: 20px;
+  }
+}
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-Regular.woff2") format("woff2");
@@ -143,6 +172,7 @@
   --lightTextGradient: linear-gradient(90deg, #bfdbfe, #ffffff);
   --darkTextGradient: linear-gradient(90deg, #7a92a9, #4b5d70);
   --normalTextSize: clamp(1.2rem, 2.6vw, 1.4rem);
+  --bigTextSize: clamp(4rem, 12vw, 6.5rem);
 }
 
 html {
@@ -164,7 +194,13 @@ select {
 }
 
 body {
+  position: relative;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  scroll-margin-top: -90px;
 }
 
 .header {
@@ -422,6 +458,12 @@ body {
   padding: 2em;
   background: linear-gradient(180deg, var(--lightPurple), var(--lightBLue));
 }
+.counter__stats {
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
 .counter__stats-box {
   position: relative;
   display: flex;
@@ -432,15 +474,16 @@ body {
   text-align: center;
 }
 .counter__stats-stat {
-  font-size: clamp(6rem, 10vw, 8rem);
+  font-size: clamp(6rem, 10vw, 10rem);
   font-weight: 900;
   background: var(--lightTextGradient);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+  letter-spacing: 3px;
 }
 .counter__stats-info {
-  font-size: clamp(1.4rem, 2.4vw, 1.6rem);
+  font-size: clamp(1.4rem, 2.4vw, 1.7rem);
   font-weight: 700;
   color: rgba(255, 255, 255, 0.8392156863);
 }
@@ -454,8 +497,18 @@ body {
 }
 
 .gallery {
-  padding: 8em 2em;
-  background: linear-gradient(180deg, var(--lightBLue), var(--lighterWhite) 55%);
+  padding: 10em 2em;
+  background: linear-gradient(180deg, var(--lightBLue), var(--lighterWhite) 70%);
+}
+.gallery__title {
+  margin-block-end: 1em;
+  font-size: var(--bigTextSize);
+  font-weight: 800;
+  text-align: center;
+  background: var(--lightTextGradient);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }
 .gallery__content {
   width: 90%;
@@ -481,8 +534,14 @@ body {
 }
 
 .reviews {
-  padding: 8em 2em;
+  position: relative;
+  padding: 8em 2em 12em;
   background: linear-gradient(180deg, var(--lighterWhite), var(--silver));
+  z-index: 0;
+}
+.reviews .reviews-bottom-bg {
+  bottom: -5px;
+  transform: rotate(180deg);
 }
 .reviews__title {
   margin-block-end: 1em;
@@ -531,6 +590,61 @@ body {
   font-size: clamp(1.2rem, 2.6vw, 1.6rem);
 }
 
+.contact {
+  padding: 6em 2em;
+  background: linear-gradient(180deg, var(--contactDark), var(--contactLight));
+}
+.contact__title {
+  font-size: var(--bigTextSize);
+  font-weight: 800;
+  background: var(--lightTextGradient);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.contact__info {
+  margin-block-start: 1em;
+  font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 150%;
+  max-width: 500px;
+  min-height: 70px;
+}
+.contact__btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 2em;
+  padding: 1.5em;
+  color: var(--pureWhite);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 500;
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  will-change: transform;
+  transition: background 0.6s 0.1s, transform 0.3s, box-shadow 0.3s;
+  background: linear-gradient(90deg, var(--btnBLue), var(--btnPurple) 80%);
+  margin-block-start: 1em;
+}
+.contact__btn:hover {
+  transform: translateY(-1px);
+  background-size: 250%;
+  background-position: right center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.contact__btn:hover .contact__cta-arrow {
+  transform: translateX(2px);
+}
+.contact__cta-arrow {
+  display: inline-block;
+  width: 10px;
+  margin-inline-start: 0.5em;
+  vertical-align: middle;
+  transition: transform 0.3s 0.1s;
+}
+
 @media (576px <= width) {
   .header__contact-link-span {
     display: inline-block;
@@ -546,11 +660,14 @@ body {
     line-height: 180%;
   }
   .gallery {
-    padding: 12em 2em;
+    padding: 15em 2em;
   }
   .gallery__content {
     width: 80%;
     max-width: 420px;
+  }
+  .reviews {
+    padding: 8em 2em 18em;
   }
 }
 @media (768px <= width) {
@@ -631,17 +748,27 @@ body {
     width: 120px;
   }
   .gallery {
-    padding: 15em 2em;
+    padding: 18em 2em;
   }
   .gallery__content {
     max-width: 500px;
+  }
+  .reviews {
+    padding: 8em 2em 20em;
   }
   .reviews__box {
     width: 100%;
     margin: 0 auto;
   }
+  .contact {
+    padding: 6em 4em;
+  }
 }
 @media (800px <= width) {
+  .counter__stats {
+    padding: 4em;
+    gap: 7em;
+  }
   .reviews__reviews {
     justify-content: space-between;
   }
@@ -767,11 +894,13 @@ body {
     background-color: #ff6b6b;
   }
   .counter__stats {
-    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20em;
+    gap: 15em;
+  }
+  .gallery__title {
+    margin-block-end: 2em;
   }
   .gallery__content {
     width: 100%;
@@ -785,7 +914,24 @@ body {
   }
   .gallery__img.active {
     transform: scale(1);
-    filter: brightness(0.9);
+    filter: brightness(1);
+  }
+  .contact__btn {
+    position: relative;
+    overflow: hidden;
+  }
+  .contact__btn::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 150%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    left: -20%;
+    top: -45%;
+    transform: rotate(20deg);
+  }
+  .contact__btn:hover::before {
+    animation: left 0.5s 0.1s forwards;
   }
 }
 @media (992px <= width) {
@@ -797,7 +943,7 @@ body {
     width: 50px;
   }
   .header__content, .header__hero {
-    padding: 8em 2em;
+    padding: 8em 4em;
   }
   .offers {
     position: relative;
@@ -818,6 +964,9 @@ body {
   .nav__link-info-text {
     font-size: 1.1rem;
   }
+  .gallery {
+    padding: 25em 2em 20em;
+  }
 }
 @media (1100px <= width) {
   .header-top-content-wrapper {
@@ -828,5 +977,8 @@ body {
   }
   .offers__content {
     padding: 0 4em;
+  }
+  .reviews {
+    padding: 8em 2em 25em;
   }
 }/*# sourceMappingURL=style.css.map */
