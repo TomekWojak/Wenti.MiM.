@@ -55,4 +55,82 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const observer = new IntersectionObserver(startCounter, options);
 	observer.observe(counterBox);
+
+	// GALLERY
+	const imagesBox = document.querySelector(".gallery__images");
+	const allImages = document.querySelectorAll(".gallery__img");
+
+	let index = 1;
+	let step;
+	let width;
+	let intervalId;
+	let carousellSpeed = 3000;
+
+	const handleCarousell = () => {
+		if (index === allImages.length - 3) {
+			step = window.innerWidth >= 900 ? 33.33 : 100;
+			width = index * step;
+			imagesBox.style.transform = `translateX(${-width}%)`;
+			allImages[index + 1].classList.add("active");
+			allImages[index].classList.remove("active");
+			allImages[1].classList.add("active");
+			setTimeout(() => {
+				allImages[index + 1].classList.remove("active");
+				imagesBox.style.transform = `translateX(${-width}%)`;
+				index = 1;
+				imagesBox.style.transition = "none";
+				imagesBox.style.transform = `translateX(0)
+			`;
+			}, 1000);
+		} else {
+			imagesBox.style.transition = "transform 0.5s";
+			allImages[index].classList.remove("active");
+
+			index++;
+
+			allImages[index].classList.add("active");
+
+			step = window.innerWidth >= 900 ? 33.33 : 100;
+			width = (index - 1) * step;
+			imagesBox.style.transform = `translateX(${-width}%)`;
+		}
+	};
+
+	window.addEventListener("resize", () => {
+		step = window.innerWidth >= 900 ? 33.33 : 100;
+		width = (index - 1) * step;
+		imagesBox.style.transform = `translateX(${-width}%)`;
+	});
+
+	intervalId = setInterval(handleCarousell, carousellSpeed);
+
+	// REVIEWS
+
+	const reviewsBox = document.querySelector(".reviews__reviews");
+	const allReviews = document.querySelectorAll(".reviews__box");
+	let reviewsSpeed = 5000;
+	let reviewsIndex = 0;
+
+	const handleReviewsCarousell = () => {
+		let step = window.innerWidth >= 800 ? 50 : 100;
+		let deviceIndex =
+			window.innerWidth >= 800 ? allReviews.length - 2 : allReviews.length - 1;
+
+		if (reviewsIndex >= deviceIndex) {
+			reviewsIndex = 0;
+			reviewsBox.style.transform = `translateX(0)`;
+		} else {
+			reviewsIndex++;
+			let width = reviewsIndex * step;
+			reviewsBox.style.transform = `translateX(${-width}%)`;
+		}
+	};
+
+	window.addEventListener("resize", () => {
+		let step = window.innerWidth >= 800 ? 50 : 100;
+		let width = reviewsIndex * step;
+		reviewsBox.style.transform = `translateX(${-width}%)`;
+	});
+
+	setInterval(handleReviewsCarousell, reviewsSpeed);
 });
