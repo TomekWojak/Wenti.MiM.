@@ -101,3 +101,14 @@
 		width: 10%;
 	}
 }
+
+@keyframes opacity {
+	from {
+		opacity: 1;
+		transform: scale(1);
+	}
+	to {
+		opacity: 0.85;
+		transform: scale(0.95);
+	}
+}
