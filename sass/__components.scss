@@ -41,7 +41,6 @@
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	margin-block-start: 2em;
 	padding: 1.5em;
 	color: var(--pureWhite);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -68,7 +67,11 @@
 	top: -45%;
 	transform: rotate(20deg);
 }
-
+@mixin contactPlaceholderBar {
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.15);
+	border-radius: 5px;
+}
 @media (992px <= width) {
 	.facebook-link {
 		right: -22px;

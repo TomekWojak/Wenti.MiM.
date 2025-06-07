@@ -13,21 +13,21 @@
 @keyframes scaling-small {
 	from {
 		transform: scale(1);
-        opacity: 0.25;
+		opacity: 0.25;
 	}
 	to {
 		transform: scale(1.35);
-        opacity: 0;
+		opacity: 0;
 	}
 }
 @keyframes scaling-big {
 	from {
 		transform: scale(1);
-        opacity: 0.25;
+		opacity: 0.25;
 	}
 	to {
 		transform: scale(1.5);
-        opacity: 0;
+		opacity: 0;
 	}
 }
 @keyframes green-moving {
@@ -50,7 +50,54 @@
 	from {
 		transform: translate(-100%, -50%);
 	}
-    to {
-        transform: translate(-100%, -20%);
-    }
+	to {
+		transform: translate(-100%, -20%);
+	}
+}
+
+@keyframes pulsing {
+	from {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	to {
+		transform: translate(-50%, -50%) scale(0.95);
+	}
+}
+@keyframes sizingLeft {
+	0% {
+		width: 10%;
+	}
+	10%,
+	20%,
+	30%,
+	40%,
+	50% {
+		width: 10%;
+	}
+	60%,
+	70%,
+	70%,
+	90%,
+	100% {
+		width: 85%;
+	}
+}
+@keyframes sizingRight {
+	0% {
+		width: 85%;
+	}
+	10%,
+	20%,
+	30%,
+	40%,
+	50% {
+		width: 85%;
+	}
+	60%,
+	70%,
+	70%,
+	90%,
+	100% {
+		width: 10%;
+	}
 }
