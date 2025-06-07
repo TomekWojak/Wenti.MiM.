@@ -240,7 +240,7 @@ body {
 }
 
 section {
-  scroll-margin-top: -80px;
+  scroll-margin-top: -90px;
 }
 
 .header {
@@ -689,99 +689,12 @@ section {
 
 .questions {
   position: relative;
-  padding: 10em 2em 12em;
+  padding: 2em;
   background-color: var(--pureWhite);
   z-index: 0;
 }
 .questions .questions-top-bg {
   top: -5px;
-}
-.questions .questions-bottom-bg {
-  bottom: -5px;
-  transform: rotate(180deg);
-}
-.questions__title {
-  margin-block-end: 1em;
-  min-height: 90px;
-  max-width: 500px;
-  font-size: var(--bigTextSize);
-  font-weight: 800;
-  background: var(--darkTextGradient);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-}
-.questions__title:last-child {
-  color: var(--graphite);
-}
-.questions__accordion-box {
-  margin: 1em 0;
-  position: relative;
-  color: var(--graphite);
-  text-align: left;
-  overflow: hidden;
-}
-.questions__accordion-toggler {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5em;
-  width: 100%;
-  height: 100%;
-  background-color: #f9f9f9;
-  font-weight: 600;
-  font-size: clamp(1.2rem, 2.6vw, 1.6rem);
-  cursor: pointer;
-  text-align: left;
-  transition: color 0.3s, background-color 0.3s;
-}
-.questions__accordion-toggler.opened {
-  color: var(--accentBlue);
-}
-.questions__accordion-toggler.opened .questions__accordion-toggler-icon {
-  stroke: var(--accentBlue);
-  transform: rotate(180deg);
-}
-.questions__accordion-toggler:hover {
-  background-color: #f1f1f1;
-}
-.questions__accordion-toggler::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  inset-block: 0;
-  width: 2px;
-  height: 100%;
-  background-color: var(--accentBlue);
-}
-.questions__accordion-toggler-icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  margin-inline-start: 1em;
-  transition: transform 0.3s, stroke 0.3s;
-}
-.questions__accordion-answer {
-  height: 0;
-  transition: height 0.3s;
-}
-.questions__accordion-answer-text {
-  padding: 2em;
-  line-height: 150%;
-  font-size: clamp(1.1rem, 2.6vw, 1.5rem);
-}
-
-.footer {
-  padding: 2em;
-  background-color: var(--footerColor);
-}
-.footer__logo {
-  text-decoration: none;
-}
-.footer__logo-img {
-  width: 75px;
-  height: auto;
 }
 
 @media (576px <= width) {
@@ -807,12 +720,6 @@ section {
   }
   .reviews {
     padding: 8em 2em 18em;
-  }
-  .questions {
-    padding: 10em 2em 18em;
-  }
-  .questions__title {
-    margin-block-end: 1.5em;
   }
 }
 @media (768px <= width) {
@@ -907,9 +814,6 @@ section {
   }
   .contact {
     padding: 6em 4em;
-  }
-  .questions {
-    padding: 15em 4em 20em;
   }
 }
 @media (800px <= width) {
@@ -1167,32 +1071,8 @@ section {
     border-radius: 5px;
     animation: sizingRight 8s infinite cubic-bezier(0.25, 0.75, 0.5, 1.25) alternate;
   }
-  .questions {
-    padding: 20em 6em 0;
-  }
-  .questions__content {
-    text-align: center;
-  }
-  .questions__title {
-    display: inline-block;
-    max-width: none;
-    margin-block-end: 0.8em;
-  }
-  .questions__accordion-toggler {
-    padding: 1.5em 2em;
-  }
-  .questions__accordion-toggler::before {
-    width: 4px;
-  }
-  .questions__accordion-toggler-icon {
-    width: 20px;
-    height: 20px;
-  }
 }
 @media (992px <= width) {
-  section {
-    scroll-margin-top: -110px;
-  }
   .header__logo-img {
     width: 90px;
     height: auto;
@@ -1204,7 +1084,6 @@ section {
     padding: 8em 4em;
   }
   .offers {
-    padding: 25em 4em 0;
     position: relative;
   }
   .nav {
@@ -1226,41 +1105,25 @@ section {
   .gallery {
     padding: 25em 2em 20em;
   }
-  .questions__accordion-box {
-    margin: 1.5em 0;
-  }
-  .questions__accordion-toggler-icon {
-    width: 24px;
-    height: 24px;
-  }
 }
 @media (1100px <= width) {
-  section {
-    scroll-margin-top: -140px;
-  }
   .header-top-content-wrapper {
     padding: 0.8em 4em;
   }
   .header__content, .header__hero {
     padding: 8em 4em;
   }
-  .nav {
-    padding: 2em 2em 35em;
-  }
   .offers {
-    padding: 30em 4em 0;
+    padding: 25em 4em 0;
   }
   .offers__content {
     padding: 0 4em;
   }
   .reviews {
-    padding: 8em 2em 35em;
+    padding: 8em 2em 25em;
   }
   .contact__box-bg {
     max-width: 350px;
     height: 120%;
-  }
-  .questions {
-    padding: 35em 6em;
   }
 }/*# sourceMappingURL=style.css.map */
