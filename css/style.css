@@ -243,6 +243,10 @@ section {
   scroll-margin-top: -80px;
 }
 
+section.reviews {
+  scroll-margin-top: -50px;
+}
+
 .header {
   background: linear-gradient(180deg, var(--lightBLue), var(--purple) 80%);
   overflow: hidden;
@@ -414,7 +418,7 @@ section {
 .offers__list {
   padding: 1em;
   width: 100%;
-  list-style-type: none;
+  list-style: none;
 }
 .offers__li {
   padding: 0.5em 0;
@@ -773,15 +777,100 @@ section {
 }
 
 .footer {
-  padding: 2em;
   background-color: var(--footerColor);
+  color: var(--pureWhite);
+}
+.footer__content {
+  padding: 5em 2em 0;
 }
 .footer__logo {
+  display: block;
   text-decoration: none;
+  margin-block-end: 2em;
 }
 .footer__logo-img {
-  width: 75px;
+  width: 80px;
   height: auto;
+}
+.footer__box {
+  margin: 5em 0;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__list-item {
+  padding: 0.8em 0;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: var(--normalTextSize);
+}
+.footer__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__title {
+  font-size: clamp(1.7rem, 3.5vw, 2.2rem);
+  margin-block-end: 1em;
+}
+.footer__icon {
+  width: 18px;
+  height: 18px;
+  margin-inline-end: 1em;
+}
+.footer__icon-text {
+  margin-inline-end: 1em;
+  font-weight: 600;
+}
+.footer__box-container {
+  display: flex;
+  gap: 2em;
+}
+.footer__hours-info {
+  font-size: var(--normalTextSize);
+  font-weight: 600;
+}
+.footer__hours-info:first-child {
+  margin-block-end: 0.3em;
+}
+.footer__hours-box-small {
+  margin-block-end: 2em;
+}
+.footer__area {
+  margin: 1.5em 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1.3em;
+  min-width: 100px;
+  background-color: var(--accentBlue);
+  border-radius: 3px;
+  text-align: center;
+}
+.footer__area-info {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.footer__bottom {
+  padding: 2em 0.8em;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.footer__bottom-text {
+  text-align: center;
+  font-weight: 600;
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  line-height: 160%;
+}
+.footer__bottom-link {
+  text-decoration: none;
+  color: var(--pureWhite);
+  font-weight: 700;
+}
+.footer__bottom-link:hover {
+  text-decoration: underline;
 }
 
 @media (576px <= width) {
@@ -813,6 +902,9 @@ section {
   }
   .questions__title {
     margin-block-end: 1.5em;
+  }
+  .footer__box-container {
+    gap: 4em;
   }
 }
 @media (768px <= width) {
@@ -910,6 +1002,17 @@ section {
   }
   .questions {
     padding: 15em 4em 20em;
+  }
+  .footer__logo-img {
+    width: 100px;
+  }
+  .footer__content {
+    padding: 5em 4em 0;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .footer__box {
+    width: 50%;
   }
 }
 @media (800px <= width) {
@@ -1168,7 +1271,7 @@ section {
     animation: sizingRight 8s infinite cubic-bezier(0.25, 0.75, 0.5, 1.25) alternate;
   }
   .questions {
-    padding: 20em 6em 0;
+    padding: 20em 6em 20em;
   }
   .questions__content {
     text-align: center;
@@ -1188,10 +1291,16 @@ section {
     width: 20px;
     height: 20px;
   }
+  .footer__content {
+    padding: 5em 6em 0;
+  }
 }
 @media (992px <= width) {
   section {
     scroll-margin-top: -110px;
+  }
+  section.reviews {
+    scroll-margin-top: 0;
   }
   .header__logo-img {
     width: 90px;
@@ -1233,10 +1342,16 @@ section {
     width: 24px;
     height: 24px;
   }
+  .footer__logo-img {
+    width: 110px;
+  }
 }
 @media (1100px <= width) {
   section {
     scroll-margin-top: -140px;
+  }
+  section.reviews {
+    scroll-margin-top: 0;
   }
   .header-top-content-wrapper {
     padding: 0.8em 4em;
@@ -1262,5 +1377,28 @@ section {
   }
   .questions {
     padding: 35em 6em;
+  }
+  .footer__content {
+    justify-content: space-between;
+  }
+  .footer__box {
+    width: 22%;
+  }
+  .footer__box:nth-child(4) {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+  .footer__box:nth-child(4) .footer__title {
+    margin: 0;
+  }
+  .footer__area {
+    margin: 0;
+  }
+  .footer__area-box {
+    display: flex;
+    gap: 2em;
   }
 }/*# sourceMappingURL=style.css.map */
