@@ -94,6 +94,20 @@
     transform: scale(0.95);
   }
 }
+@keyframes bgAnimation {
+  0%, 10%, 30% {
+    transform: scale(1) rotate(0);
+  }
+  40%, 50% {
+    transform: scale(1.1) rotate(0);
+  }
+  60%, 70% {
+    transform: scale(1) rotate(0);
+  }
+  80%, 90%, 100% {
+    transform: scale(1) rotate(180deg);
+  }
+}
 .wrapper {
   width: 100%;
   max-width: 1200px;
@@ -113,6 +127,10 @@
   width: 100%;
   height: auto;
   z-index: -1;
+}
+
+.pattern-bg {
+  display: none;
 }
 
 .facebook-link {
@@ -135,13 +153,156 @@
   transform: translate(-15px, -50%);
 }
 
+.contact__small-box {
+  position: relative;
+  padding: 3em 2em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 0;
+}
+.contact__small-box--conditioning {
+  background-color: #4a6fa5;
+}
+
+.contact__small-box-title {
+  font-size: clamp(2.4rem, 10vw, 4.5rem);
+  font-weight: 800;
+  color: var(--pureWhite);
+}
+
+.contact__small-box-btn {
+  margin-block-start: 2em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em;
+  color: var(--pureWhite);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 500;
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  will-change: transform;
+  transition: background 0.6s 0.1s, transform 0.3s, box-shadow 0.3s;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  background-color: var(--btnBLue);
+}
+.contact__small-box-btn:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #196df6;
+}
+.contact__small-box-btn:hover .contact__small-box-btn-icon {
+  transform: translateX(3px);
+}
+
+.contact__small-box-btn-icon {
+  margin-inline-start: 0.4em;
+  transition: transform 0.3s 0.1s;
+}
+
+.contact__small-box-bg {
+  position: absolute;
+  height: 30%;
+  inset-inline: 0;
+  bottom: -5px;
+  z-index: -1;
+}
+
+.contact__small-box-bg-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer-bottom-bg {
+  bottom: -5px;
+  transform: rotate(180deg);
+}
+
+@media (768px <= width) {
+  .contact__small-box {
+    padding: 5em 3em;
+  }
+}
+@media (900px <= width) {
+  .contact__small-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact__small-box-btn {
+    margin: 0;
+  }
+  .contact__small-box-title {
+    width: 45%;
+    max-width: 350px;
+  }
+}
 @media (992px <= width) {
+  .contact__small-box {
+    padding: 7em 4em;
+  }
+  .pattern-bg {
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: auto;
+    z-index: -1;
+  }
+  .pattern-bg:first-child {
+    top: 60%;
+    left: 2em;
+    opacity: 0.6;
+  }
+  .pattern-bg:nth-child(2) {
+    top: 55%;
+    right: 10%;
+  }
+  .pattern-bg:nth-child(3) {
+    top: 78%;
+    left: 60%;
+    width: 30px;
+    animation: bgAnimation 10s infinite alternate;
+  }
+  .pattern-bg:nth-child(4) {
+    width: 40px;
+    top: 42%;
+    left: 42%;
+    opacity: 0.8;
+  }
+  .pattern-bg:nth-child(5) {
+    width: 35px;
+    top: 76%;
+    left: 8%;
+    opacity: 0.7;
+  }
   .facebook-link {
     right: -22px;
   }
   .facebook-link svg {
     width: 20px;
     height: 20px;
+  }
+}
+@media (1100px <= width) {
+  .pattern-bg:nth-child(2) {
+    top: 53%;
+    right: 20%;
+  }
+  .pattern-bg:nth-child(3) {
+    top: 75%;
+    left: 75%;
+  }
+  .pattern-bg:nth-child(4) {
+    width: 45px;
+    top: 40%;
+    left: 65%;
+  }
+  .pattern-bg:nth-child(5) {
+    top: 74%;
+    left: 15%;
   }
 }
 @font-face {
@@ -211,7 +372,7 @@
   --lightPurple: #5c7aea;
   --lightTextGradient: linear-gradient(90deg, #bfdbfe, #ffffff);
   --darkTextGradient: linear-gradient(90deg, #7a92a9, #4b5d70);
-  --normalTextSize: clamp(1.2rem, 2.6vw, 1.4rem);
+  --normalTextSize: clamp(1.2rem, 2.6vw, 1.5rem);
   --bigTextSize: clamp(4rem, 12vw, 6.5rem);
 }
 
@@ -405,7 +566,7 @@ section.reviews {
 }
 .offers__subtitle {
   margin-block-start: 2em;
-  font-size: clamp(1.4rem, 3.4vw, 1.85rem);
+  font-size: clamp(1.4rem, 3.4vw, 2rem);
   line-height: 170%;
   font-weight: 700;
 }
@@ -635,8 +796,10 @@ section.reviews {
 }
 
 .contact {
-  padding: 6em 2em;
   background: linear-gradient(180deg, var(--contactDark), var(--contactLight));
+}
+.contact__box {
+  padding: 6em 2em;
 }
 .contact__title {
   font-size: var(--bigTextSize);
@@ -803,7 +966,7 @@ section.reviews {
   display: flex;
   align-items: center;
   font-weight: 600;
-  font-size: var(--normalTextSize);
+  font-size: clamp(1.2rem, 2.6vw, 1.4rem);
 }
 .footer__link {
   display: block;
@@ -814,7 +977,7 @@ section.reviews {
   text-decoration: underline;
 }
 .footer__title {
-  font-size: clamp(1.7rem, 3.5vw, 2.2rem);
+  font-size: clamp(1.7rem, 3.5vw, 2rem);
   margin-block-end: 1em;
 }
 .footer__icon {
@@ -831,7 +994,7 @@ section.reviews {
   gap: 2em;
 }
 .footer__hours-info {
-  font-size: var(--normalTextSize);
+  font-size: clamp(1.2rem, 2.6vw, 1.4rem);
   font-weight: 600;
 }
 .footer__hours-info:first-child {
@@ -873,6 +1036,98 @@ section.reviews {
   text-decoration: underline;
 }
 
+.header.header__conditioning {
+  background: none;
+}
+.header__conditioning-bottom-bg {
+  bottom: -5px;
+  transform: rotate(180deg);
+}
+.header__hero-section {
+  position: relative;
+  padding: 15em 2em;
+  background-image: url("../images/webp/Conditioning-bg.webp");
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+.header__hero-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.header__hero-section-title {
+  text-align: center;
+  font-size: clamp(3.2rem, 8vw, 7rem);
+  font-weight: 800;
+  color: var(--pureWhite);
+}
+
+.conditioning {
+  position: relative;
+  background-color: var(--pureWhite);
+  color: var(--graphite);
+  z-index: 0;
+}
+.conditioning__title {
+  margin-block-start: 3em;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 700;
+}
+.conditioning__title--bottom {
+  margin-block-start: 3em;
+}
+.conditioning .blue-line {
+  width: 60px;
+  margin: 2em 0 4em;
+}
+.conditioning__content {
+  padding: 6em 2em 15em;
+  position: relative;
+  z-index: 0;
+}
+.conditioning__text {
+  font-size: var(--normalTextSize);
+  line-height: 180%;
+}
+.conditioning__box-img {
+  display: none;
+}
+.conditioning__subtitle {
+  margin-block-start: 4em;
+  font-size: clamp(1.4rem, 3.4vw, 2rem);
+}
+.conditioning__info {
+  margin-block-start: 2em;
+  font-size: var(--normalTextSize);
+  line-height: 180%;
+}
+.conditioning__container {
+  margin: 6em 0 10em;
+}
+.conditioning__img-container--top {
+  background-image: url("../images/webp/air-conditioning-woman-mobile-blurred.webp");
+}
+.conditioning__img-container--bottom {
+  background-image: url("../images/webp/air-conditioning-repairing-blurred.webp");
+}
+.conditioning__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 10px rgba(46, 46, 46, 0.0352941176);
+}
+.conditioning__img.desktop-visible {
+  display: none;
+}
+.conditioning__box:first-child {
+  margin-block-start: 5em;
+}
+
 @media (576px <= width) {
   .header__contact-link-span {
     display: inline-block;
@@ -906,6 +1161,9 @@ section.reviews {
   .footer__box-container {
     gap: 4em;
   }
+  .header__hero-section {
+    padding: 20em 2em;
+  }
 }
 @media (768px <= width) {
   .header-top-content-wrapper {
@@ -921,7 +1179,6 @@ section.reviews {
     font-size: 2rem;
   }
   .offers__text {
-    line-height: 180%;
     font-size: 1.6rem;
   }
   .offers__bold {
@@ -997,7 +1254,7 @@ section.reviews {
     width: 100%;
     margin: 0 auto;
   }
-  .contact {
+  .contact__box {
     padding: 6em 4em;
   }
   .questions {
@@ -1013,6 +1270,12 @@ section.reviews {
   }
   .footer__box {
     width: 50%;
+  }
+  .conditioning__content {
+    padding: 6em 2em 25em;
+  }
+  .conditioning__container {
+    margin: 6em 0 10em;
   }
 }
 @media (800px <= width) {
@@ -1345,6 +1608,74 @@ section.reviews {
   .footer__logo-img {
     width: 110px;
   }
+  .header__hero-section {
+    padding: 25em 2em;
+  }
+  .conditioning__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .conditioning__box-img-container {
+    margin: 0;
+    width: 40%;
+  }
+  .conditioning__box-img {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+  }
+  .conditioning__content {
+    padding: 6em 2em 30em;
+  }
+  .conditioning__box-info {
+    width: 50%;
+  }
+  .conditioning__container {
+    display: flex;
+    align-items: center;
+    margin: 8em 0;
+  }
+  .conditioning__container--bottom {
+    justify-content: flex-end;
+    margin: 12em 0 20em;
+  }
+  .conditioning__title:first-child {
+    margin: 0;
+  }
+  .conditioning__title--bottom {
+    margin: 0;
+  }
+  .conditioning__container-text {
+    width: 50%;
+    padding-inline-start: 5em;
+  }
+  .conditioning__container-text--bottom {
+    padding-inline-start: 0;
+    padding-inline-end: 4em;
+  }
+  .conditioning__img-container {
+    width: 35%;
+    max-width: 350px;
+  }
+  .conditioning__img-container--top {
+    background-image: url("../images/webp/air-conditioning-woman-blurred.webp");
+  }
+  .conditioning__img-container--bottom {
+    order: 1;
+  }
+  .conditioning__img {
+    min-height: 403px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .conditioning__img.mobile-visible {
+    display: none;
+  }
+  .conditioning__img.desktop-visible {
+    display: block;
+  }
 }
 @media (1100px <= width) {
   section {
@@ -1382,7 +1713,7 @@ section.reviews {
     justify-content: space-between;
   }
   .footer__box {
-    width: 22%;
+    width: 25%;
   }
   .footer__box:nth-child(4) {
     display: flex;
@@ -1400,5 +1731,13 @@ section.reviews {
   .footer__area-box {
     display: flex;
     gap: 2em;
+  }
+  .conditioning__content {
+    padding: 6em 2em 30em;
+  }
+}
+@media (1250px <= width) {
+  .footer__content {
+    padding: 5em 2em 0;
   }
 }/*# sourceMappingURL=style.css.map */

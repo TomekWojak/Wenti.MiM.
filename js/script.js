@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+	const handleFooterYear = () => {
+		const currentYear = new Date().getFullYear();
+		document.querySelector(".footer__year").textContent = currentYear;
+	};
+	handleFooterYear();
 	// ADDING SVG ICONS TO NAV SECTION
 	const airConditioningImg = document.querySelector(
 		".nav__link-img-conditioning"

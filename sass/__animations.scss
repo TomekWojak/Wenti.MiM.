@@ -112,3 +112,24 @@
 		transform: scale(0.95);
 	}
 }
+
+@keyframes bgAnimation {
+	0%,
+	10%,
+	30% {
+		transform: scale(1) rotate(0);
+	}
+	40%,
+	50% {
+		transform: scale(1.1) rotate(0);
+	}
+	60%,
+	70% {
+		transform: scale(1) rotate(0);
+	}
+	80%,
+	90%,
+	100% {
+		transform: scale(1) rotate(180deg);
+	}
+}
