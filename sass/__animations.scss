@@ -133,3 +133,51 @@
 		transform: scale(1) rotate(180deg);
 	}
 }
+
+@keyframes showBackToTop {
+	from {
+		bottom: -100px;
+	}
+	to {
+		bottom: -26px;
+	}
+}
+@keyframes hideBackToTop {
+	from {
+		bottom: -26px;
+	}
+	to {
+		bottom: -100px;
+	}
+}
+
+@keyframes contactBgRed {
+	from {
+		opacity: 0.6;
+		transform: scale(0.9) translateY(0);
+	}
+	to {
+		opacity: 0.3;
+		transform: scale(1.2) translateY(50px);
+	}
+}
+
+@keyframes contactBgGreen {
+	from {
+		opacity: 0.6;
+		transform: scale(0.9) translateY(0);
+	}
+	to {
+		opacity: 0.3;
+		transform: scale(1.2) translateY(-50px);
+	}
+}
+
+@keyframes rotateLeft {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
