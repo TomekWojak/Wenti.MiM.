@@ -56,6 +56,9 @@ section {
 section.reviews {
 	scroll-margin-top: -50px;
 }
+nav {
+	scroll-margin-top: 100px;
+}
 // HEADER
 .header {
 	background: linear-gradient(180deg, var(--lightBLue), var(--purple) 80%);
@@ -721,6 +724,9 @@ section.reviews {
 		&-recuperation {
 			background-image: url("../images/webp/recuperation-bg.webp");
 		}
+		&-water {
+			background-image: url("../images/webp/water-section-img.webp");
+		}
 
 		&::before {
 			content: "";
@@ -820,6 +826,13 @@ section.reviews {
 	&__img-container {
 		margin-block-start: 5em;
 		height: 300px;
+
+		&--top {
+			background-image: url("../images/webp/recuperation-img-blurred.webp");
+		}
+		&--bottom {
+			background-image: url("../images/webp/recuperation-img-bottom-blurred.webp");
+		}
 	}
 	&__img {
 		width: 100%;
@@ -828,6 +841,30 @@ section.reviews {
 	}
 	&__box--bottom {
 		margin-block-end: 10em;
+	}
+}
+
+// WATER INSTALATION SECTION
+
+.water {
+	&__box {
+		margin-block-start: 5em;
+	}
+	&__box--bottom {
+		margin-block-end: 10em;
+	}
+	&__img-container--top {
+		background-image: url("../images/webp/water-img-blurred.webp");
+	}
+	&__img-desktop-visible {
+		display: none;
+	}
+	&__img-container--bottom {
+		background-image: url("../images/webp/water-bg-blurred.webp");
+	}
+	&__img--bottom {
+		max-height: 550px;
+		object-fit: cover;
 	}
 }
 
@@ -895,6 +932,14 @@ section.reviews {
 	.recuperation {
 		&__img-container {
 			height: 450px;
+		}
+	}
+	.water {
+		&__img-mobile-visible {
+			display: none;
+		}
+		&__img-desktop-visible {
+			display: block;
 		}
 	}
 }
@@ -1360,6 +1405,9 @@ section.reviews {
 	section.reviews {
 		scroll-margin-top: 0;
 	}
+	nav {
+		scroll-margin-top: 200px;
+	}
 	.header {
 		&__logo-img {
 			width: 90px;
@@ -1500,6 +1548,34 @@ section.reviews {
 		}
 		&__box--bottom {
 			margin-block-end: 20em;
+		}
+	}
+	.water {
+		&__box {
+			margin: 10em 0;
+		}
+		&__box--bottom {
+			margin-block-end: 15em;
+		}
+		&__box--top {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		&__img-container--top {
+			width: 45%;
+			max-width: 450px;
+		}
+		&__img--top {
+			min-height: 600px;
+			object-fit: cover;
+		}
+		&__text-container--top {
+			width: 50%;
+			padding-inline-start: 5em;
+		}
+		&__subtitle:first-of-type {
+			margin-block-start: 2em;
 		}
 	}
 }
