@@ -716,6 +716,7 @@ nav {
 		padding: 15em 2em;
 		background-position: center;
 		background-size: cover;
+		background-repeat: no-repeat;
 		z-index: 0;
 
 		&-conditioning {
@@ -798,6 +799,10 @@ nav {
 		margin: 6em 0 10em;
 	}
 	&__img-container {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
 		&--top {
 			background-image: url("../images/webp/air-conditioning-woman-mobile-blurred.webp");
 		}
@@ -853,6 +858,7 @@ nav {
 	&__box--bottom {
 		margin-block-end: 10em;
 	}
+
 	&__img-container--top {
 		background-image: url("../images/webp/water-img-blurred.webp");
 	}
