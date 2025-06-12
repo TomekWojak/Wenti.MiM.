@@ -336,7 +336,9 @@ nav {
 		background: var(--lightTextGradient);
 		background-clip: text;
 		color: transparent;
+		opacity: 0;
 		letter-spacing: 3px;
+		transition: opacity 1s;
 	}
 	&__stats-info {
 		font-size: clamp(1.4rem, 2.4vw, 1.7rem);
@@ -350,6 +352,9 @@ nav {
 		transform: translate(-50%, -50%);
 		width: 100px;
 		height: auto;
+	}
+	.show {
+		opacity: 1;
 	}
 }
 
@@ -525,9 +530,7 @@ nav {
 		max-width: 500px;
 		font-size: var(--bigTextSize);
 		font-weight: 800;
-		background: var(--darkTextGradient);
-		background-clip: text;
-		color: transparent;
+		color: var(--graphite);
 
 		&:last-child {
 			color: var(--graphite);

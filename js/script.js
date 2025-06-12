@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const counterBox = document.querySelector(".counter");
 
 	const options = {
-		rootMargin: "-250px",
+		rootMargin: "-220px",
 	};
 	const startCounter = (entry) => {
 		if (entry[0].isIntersecting) {
@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				const updateCounter = () => {
 					const finalNumber = counter.getAttribute("data-number");
 					const value = parseInt(counter.textContent);
+					counter.classList.add('show')
 
 					const speed = 2;
 
