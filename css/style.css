@@ -10,6 +10,14 @@
     transform: rotate(20deg);
   }
 }
+@keyframes upAndDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
 @keyframes scaling-small {
   from {
     transform: scale(1);
@@ -150,6 +158,14 @@
   }
   to {
     transform: rotate(-360deg);
+  }
+}
+@keyframes counterBgScaling {
+  from {
+    transform: translate(-50%, -60%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -60%) scale(1.1);
   }
 }
 .wrapper {
@@ -299,7 +315,7 @@
 }
 .contact__small-box-btn:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  background-color: #196df6;
+  background-color: #5b96f9;
 }
 .contact__small-box-btn:hover .contact__small-box-btn-icon {
   transform: translateX(3px);
@@ -583,7 +599,10 @@ input[type=checkbox].agreement-input:focus-visible {
   color: var(--pureWhite);
   letter-spacing: 1px;
   cursor: pointer;
-  transition: background 0.6s 0.1s, box-shadow 0.3s;
+  transition: background 0.6s 0.1s, box-shadow 0.3s, transform 0.3s;
+}
+.contact-form-btn:active {
+  transform: scale(0.95);
 }
 .contact-form-btn:hover {
   background-size: 250%;
@@ -595,6 +614,12 @@ input[type=checkbox].agreement-input:focus-visible {
 }
 
 @media (700px <= width) {
+  .blue-line {
+    margin: 2em 0;
+    width: 120px;
+    height: 2px;
+    background-color: var(--accentBlue);
+  }
   .contact-form-box-error,
   .contact-form-box-question-error {
     font-size: 1.2rem;
@@ -697,34 +722,35 @@ input[type=checkbox].agreement-input:focus-visible {
     animation: rotateLeft 50s infinite;
   }
   .rec-pattern-bg:nth-child(2) {
-    top: 17%;
+    top: 15%;
     left: 40%;
     opacity: 0.8;
   }
   .rec-pattern-bg:nth-child(3) {
-    top: 60%;
+    top: 63%;
     left: 10%;
     opacity: 0.5;
   }
   .rec-pattern-bg:nth-child(4) {
-    top: 75%;
+    top: 79%;
     left: 55%;
     opacity: 0.8;
     animation: rotateLeft 70s infinite;
   }
   .rec-pattern-bg:nth-child(5) {
     width: 25px;
-    top: 75%;
+    top: 78%;
     left: 5%;
     opacity: 0.5;
   }
   .pattern-bg:first-child {
-    top: 60%;
-    left: 2em;
+    top: 62%;
+    left: 4em;
     opacity: 0.6;
+    animation: upAndDown 3s infinite alternate;
   }
   .pattern-bg:nth-child(2) {
-    top: 55%;
+    top: 60%;
     right: 10%;
   }
   .pattern-bg:nth-child(3) {
@@ -735,7 +761,7 @@ input[type=checkbox].agreement-input:focus-visible {
   }
   .pattern-bg:nth-child(4) {
     width: 40px;
-    top: 42%;
+    top: 47%;
     left: 42%;
     opacity: 0.8;
   }
@@ -772,33 +798,33 @@ input[type=checkbox].agreement-input:focus-visible {
 }
 @media (1100px <= width) {
   .rec-pattern-bg:nth-child(2) {
-    top: 16%;
     opacity: 0.6;
   }
   .rec-pattern-bg:nth-child(3) {
-    top: 59%;
     left: 17%;
     opacity: 0.5;
   }
+  .rec-pattern-bg:nth-child(4) {
+    top: 79%;
+    left: 60%;
+  }
   .rec-pattern-bg:nth-child(5) {
     width: 30px;
-    top: 74%;
   }
   .pattern-bg:nth-child(2) {
-    top: 53%;
+    top: 60%;
     right: 20%;
   }
   .pattern-bg:nth-child(3) {
-    top: 75%;
     left: 75%;
   }
   .pattern-bg:nth-child(4) {
     width: 45px;
-    top: 40%;
-    left: 65%;
+    top: 46%;
+    left: 45%;
   }
   .pattern-bg:nth-child(5) {
-    top: 74%;
+    top: 77%;
     left: 15%;
   }
   .contact__box-bg-shape--square {
@@ -988,6 +1014,9 @@ nav {
           background-clip: text;
   max-width: 500px;
   color: transparent;
+}
+.header__title:last-child {
+  background-image: linear-gradient(270deg, #bfdbfe, #ffffff);
 }
 .header__info {
   min-height: 70px;
@@ -1188,6 +1217,7 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: 0;
 }
 .counter__stats-stat {
   font-size: clamp(6rem, 10vw, 10rem);
@@ -1198,7 +1228,7 @@ nav {
   color: transparent;
   opacity: 0;
   letter-spacing: 3px;
-  transition: opacity 1s;
+  transition: opacity 0.7s;
 }
 .counter__stats-info {
   font-size: clamp(1.4rem, 2.4vw, 1.7rem);
@@ -1209,9 +1239,13 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
+  transform: translate(-50%, -60%);
+  width: 60px;
   height: auto;
+  opacity: 0.15;
+  z-index: -1;
+  filter: invert(1);
+  animation: counterBgScaling 3s infinite alternate;
 }
 .counter .show {
   opacity: 1;
@@ -1394,6 +1428,14 @@ nav {
 .questions__title:last-child {
   color: var(--graphite);
 }
+.questions__subtitle {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  color: var(--graphite);
+  margin: 3em 0 1em;
+}
+.questions__subtitle:first-of-type {
+  margin: 1em 0;
+}
 .questions__accordion-box {
   margin: 1em 0;
   position: relative;
@@ -1411,7 +1453,7 @@ nav {
   height: 100%;
   background-color: #f9f9f9;
   font-weight: 600;
-  font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+  font-size: clamp(1.4rem, 2.6vw, 1.7rem);
   cursor: pointer;
   text-align: left;
   transition: color 0.3s, background-color 0.3s;
@@ -1447,9 +1489,9 @@ nav {
   transition: height 0.3s;
 }
 .questions__accordion-answer-text {
-  padding: 2em;
-  line-height: 150%;
-  font-size: clamp(1.1rem, 2.6vw, 1.5rem);
+  padding: 2em 1em;
+  line-height: 180%;
+  font-size: clamp(1.3rem, 2.6vw, 1.5rem);
 }
 
 .footer {
@@ -1863,7 +1905,7 @@ nav {
     padding: 2em 4em;
   }
   .counter__stats-bg {
-    width: 120px;
+    width: 100px;
   }
   .gallery {
     padding: 18em 2em;
@@ -1883,6 +1925,9 @@ nav {
   }
   .questions {
     padding: 15em 4em 20em;
+  }
+  .questions__subtitle {
+    margin-block-start: 3em;
   }
   .footer__logo-img {
     width: 100px;
@@ -2088,13 +2133,11 @@ nav {
   }
   .contact__box-text {
     width: 100%;
-    padding: 0 2em;
   }
   .contact__box-placeholder {
     position: relative;
     display: block;
     width: 100%;
-    padding: 0 2em;
     z-index: 0;
   }
   .contact__box-bg {
@@ -2170,6 +2213,9 @@ nav {
     display: inline-block;
     max-width: none;
     margin-block-end: 0.8em;
+  }
+  .questions__subtitle {
+    text-align: left;
   }
   .questions__accordion-toggler {
     padding: 1.5em 2em;
@@ -2388,6 +2434,9 @@ nav {
   }
   .offers__content {
     padding: 0 4em;
+  }
+  .counter__stats {
+    gap: 20em;
   }
   .reviews {
     padding: 8em 2em 35em;

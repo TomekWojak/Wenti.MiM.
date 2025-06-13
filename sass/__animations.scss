@@ -10,6 +10,14 @@
 		transform: rotate(20deg);
 	}
 }
+@keyframes upAndDown {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(10px);
+	}
+}
 @keyframes scaling-small {
 	from {
 		transform: scale(1);
@@ -179,5 +187,14 @@
 	}
 	to {
 		transform: rotate(-360deg);
+	}
+}
+
+@keyframes counterBgScaling {
+	from {
+		transform: translate(-50%, -60%) scale(1);
+	}
+	to {
+		transform: translate(-50%, -60%) scale(1.1);
 	}
 }

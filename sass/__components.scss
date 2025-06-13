@@ -164,7 +164,7 @@
 
 	&:hover {
 		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-		background-color: #196df6;
+		background-color: #5b96f9;
 	}
 	&:hover .contact__small-box-btn-icon {
 		transform: translateX(3px);
@@ -420,8 +420,11 @@ input[type="checkbox"].agreement-input {
 	color: var(--pureWhite);
 	letter-spacing: 1px;
 	cursor: pointer;
-	transition: background 0.6s 0.1s, box-shadow 0.3s;
+	transition: background 0.6s 0.1s, box-shadow 0.3s, transform 0.3s;
 
+	&:active {
+		transform: scale(0.95);
+	}
 	&:hover {
 		background-size: 250%;
 		background-position: right center;
@@ -432,6 +435,12 @@ input[type="checkbox"].agreement-input {
 	}
 }
 @media (700px <= width) {
+	.blue-line {
+		margin: 2em 0;
+		width: 120px;
+		height: 2px;
+		background-color: var(--accentBlue);
+	}
 	.contact-form-box-error,
 	.contact-form-box-question-error {
 		font-size: 1.2rem;
@@ -539,35 +548,36 @@ input[type="checkbox"].agreement-input {
 		animation: rotateLeft 50s infinite;
 	}
 	.rec-pattern-bg:nth-child(2) {
-		top: 17%;
+		top: 15%;
 		left: 40%;
 		opacity: 0.8;
 	}
 	.rec-pattern-bg:nth-child(3) {
-		top: 60%;
+		top: 63%;
 		left: 10%;
 		opacity: 0.5;
 	}
 	.rec-pattern-bg:nth-child(4) {
-		top: 75%;
+		top: 79%;
 		left: 55%;
 		opacity: 0.8;
 		animation: rotateLeft 70s infinite;
 	}
 	.rec-pattern-bg:nth-child(5) {
 		width: 25px;
-		top: 75%;
+		top: 78%;
 		left: 5%;
 		opacity: 0.5;
 	}
 
 	.pattern-bg:first-child {
-		top: 60%;
-		left: 2em;
+		top: 62%;
+		left: 4em;
 		opacity: 0.6;
+		animation: upAndDown 3s infinite alternate;
 	}
 	.pattern-bg:nth-child(2) {
-		top: 55%;
+		top: 60%;
 		right: 10%;
 	}
 	.pattern-bg:nth-child(3) {
@@ -578,7 +588,7 @@ input[type="checkbox"].agreement-input {
 	}
 	.pattern-bg:nth-child(4) {
 		width: 40px;
-		top: 42%;
+		top: 47%;
 		left: 42%;
 		opacity: 0.8;
 	}
@@ -619,34 +629,35 @@ input[type="checkbox"].agreement-input {
 
 @media (1100px <= width) {
 	.rec-pattern-bg:nth-child(2) {
-		top: 16%;
 		opacity: 0.6;
 	}
 	.rec-pattern-bg:nth-child(3) {
-		top: 59%;
 		left: 17%;
 		opacity: 0.5;
 	}
+	.rec-pattern-bg:nth-child(4) {
+		top: 79%;
+		left: 60%;
+	}
 	.rec-pattern-bg:nth-child(5) {
 		width: 30px;
-		top: 74%;
 	}
 	.pattern-bg {
 		&:nth-child(2) {
-			top: 53%;
+			top: 60%;
 			right: 20%;
 		}
+
 		&:nth-child(3) {
-			top: 75%;
 			left: 75%;
 		}
 		&:nth-child(4) {
 			width: 45px;
-			top: 40%;
-			left: 65%;
+			top: 46%;
+			left: 45%;
 		}
 		&:nth-child(5) {
-			top: 74%;
+			top: 77%;
 			left: 15%;
 		}
 	}
