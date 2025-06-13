@@ -26,7 +26,7 @@
 	--lightPurple: #5c7aea;
 	--lightTextGradient: linear-gradient(90deg, #bfdbfe, #ffffff);
 	--darkTextGradient: linear-gradient(90deg, #7a92a9, #4b5d70);
-	--normalTextSize: clamp(1.2rem, 2.6vw, 1.5rem);
+	--normalTextSize: clamp(1.45rem, 2.6vw, 1.6rem);
 	--bigTextSize: clamp(4rem, 12vw, 6.5rem);
 }
 html {
@@ -139,7 +139,7 @@ nav {
 		margin-block-start: 1em;
 		color: rgba(255, 255, 255, 0.8);
 		line-height: 150%;
-		font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+		font-size: clamp(1.3rem, 2.8vw, 1.6rem);
 		max-width: 500px;
 	}
 	&__cta,
@@ -214,7 +214,7 @@ nav {
 	}
 	&__subtitle {
 		margin-block-start: 2em;
-		font-size: clamp(1.4rem, 3.4vw, 2rem);
+		font-size: clamp(1.7rem, 3.4vw, 2.2rem);
 		line-height: 170%;
 		font-weight: 700;
 	}
@@ -247,7 +247,7 @@ nav {
 		display: block;
 		font-weight: 600;
 		line-height: 170%;
-		font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+		font-size: var(--normalTextSize);
 	}
 }
 
@@ -269,7 +269,7 @@ nav {
 		padding: 3em 0 0;
 		width: 80%;
 		max-width: 300px;
-		height: 190px;
+		height: 200px;
 		text-decoration: none;
 		color: var(--pureBlack);
 		font-weight: 600;
@@ -305,6 +305,7 @@ nav {
 		text-transform: uppercase;
 		letter-spacing: 0.5px;
 		border-top: 1px solid #e2e8f0;
+		font-size: 1.2rem;
 		gap: 0.5em;
 	}
 	&__link-arrow {
@@ -336,7 +337,7 @@ nav {
 		z-index: 0;
 	}
 	&__stats-stat {
-		font-size: clamp(6rem, 10vw, 10rem);
+		font-size: clamp(8rem, 10vw, 10rem);
 		font-weight: 900;
 		background: var(--lightTextGradient);
 		background-clip: text;
@@ -346,7 +347,7 @@ nav {
 		transition: opacity 0.7s;
 	}
 	&__stats-info {
-		font-size: clamp(1.4rem, 2.4vw, 1.7rem);
+		font-size: clamp(1.5rem, 2.4vw, 1.7rem);
 		font-weight: 700;
 		color: #ffffffd6;
 	}
@@ -357,7 +358,7 @@ nav {
 		transform: translate(-50%, -60%);
 		width: 60px;
 		height: auto;
-		opacity: 0.15;
+		opacity: 0.13;
 		z-index: -1;
 		filter: invert(1);
 		animation: counterBgScaling 3s infinite alternate;
@@ -378,7 +379,7 @@ nav {
 	);
 	&__title {
 		margin-block-end: 1em;
-		font-size: clamp(3rem, 8vw, 5rem);
+		font-size: clamp(3.5rem, 8vw, 5rem);
 		font-weight: 800;
 		text-align: center;
 		background: var(--lightTextGradient);
@@ -458,12 +459,12 @@ nav {
 		opacity: 0.3;
 	}
 	&__box-review {
-		font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+		font-size: clamp(1.35rem, 2.6vw, 1.6rem);
 	}
 	&__box-name {
 		margin-block-start: 1em;
 		font-weight: 700;
-		font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+		font-size: clamp(1.4rem, 2.6vw, 1.6rem);
 	}
 }
 
@@ -487,7 +488,7 @@ nav {
 	}
 	&__info {
 		margin-block-start: 1em;
-		font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+		font-size: clamp(1.3rem, 2.8vw, 1.6rem);
 		color: rgba(255, 255, 255, 0.8);
 		line-height: 150%;
 		max-width: 500px;
@@ -546,12 +547,12 @@ nav {
 		}
 	}
 	&__subtitle {
-		font-size: clamp(1.8rem, 5vw, 3rem);
+		font-size: clamp(2rem, 5vw, 3rem);
 		color: var(--graphite);
 		margin: 3em 0 1em;
 
 		&:first-of-type {
-			margin: 1em 0;
+			margin: 1em 0 1.5em;
 		}
 	}
 	&__accordion-box {
@@ -571,7 +572,7 @@ nav {
 		height: 100%;
 		background-color: #f9f9f9;
 		font-weight: 600;
-		font-size: clamp(1.4rem, 2.6vw, 1.7rem);
+		font-size: clamp(1.4rem, 2.6vw, 1.8rem);
 		cursor: pointer;
 		text-align: left;
 		transition: color 0.3s, background-color 0.3s;
@@ -611,7 +612,7 @@ nav {
 	&__accordion-answer-text {
 		padding: 2em 1em;
 		line-height: 180%;
-		font-size: clamp(1.3rem, 2.6vw, 1.5rem);
+		font-size: clamp(1.35rem, 2.6vw, 1.5rem);
 	}
 }
 
@@ -981,12 +982,7 @@ nav {
 	}
 	.offers {
 		padding: 20em 4em 5em;
-		&__subtitle {
-			font-size: 2rem;
-		}
-		&__text {
-			font-size: 1.6rem;
-		}
+
 		&__bold {
 			line-height: 180%;
 		}
@@ -1470,9 +1466,6 @@ nav {
 
 		&__link {
 			width: 25%;
-		}
-		&__link-info-text {
-			font-size: 1.1rem;
 		}
 	}
 	.gallery {
