@@ -59,6 +59,13 @@ section.reviews {
 nav {
 	scroll-margin-top: 100px;
 }
+.to-animate {
+	opacity: 0;
+	transform: translateY(30px);
+}
+.animated {
+	animation: sectionAnimated 0.4s 0.2s forwards;
+}
 // HEADER
 .header {
 	background: linear-gradient(180deg, var(--lightBLue), var(--purple) 80%);
@@ -121,7 +128,7 @@ nav {
 		display: none;
 	}
 	&__title {
-		font-size: clamp(4.3rem, 12vw, 7rem);
+		font-size: clamp(4.5rem, 12vw, 7rem);
 		line-height: 140%;
 		min-height: 180px;
 		font-weight: 800;
@@ -1154,6 +1161,10 @@ nav {
 			transform: translate(-50%, -45%);
 			width: 100%;
 			height: auto;
+
+			&.animated {
+				animation: heroAnimated 1s 0.4s forwards;
+			}
 		}
 		&__cta,
 		&__reviews-btn {
@@ -1505,12 +1516,11 @@ nav {
 		}
 		&__box-img-container {
 			margin: 0;
-			width: 40%;
+			width: 43%;
 		}
 		&__box-img {
 			display: block;
 			width: 100%;
-			max-width: 340px;
 			height: auto;
 		}
 

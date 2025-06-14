@@ -198,3 +198,24 @@
 		transform: translate(-50%, -60%) scale(1.1);
 	}
 }
+
+@keyframes sectionAnimated {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes heroAnimated {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -35%);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, -45%);
+	}
+}

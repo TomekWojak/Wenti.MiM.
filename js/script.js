@@ -5,6 +5,31 @@ document.addEventListener("DOMContentLoaded", function () {
 	};
 	handleFooterYear();
 
+	// SECTiON ANIMATIONS
+	const sectionOptions = {
+		rootMargin: "-200px",
+	};
+
+	const toAnimateSections = document.querySelectorAll(".to-animate");
+	if (window.innerWidth >= 900) {
+		const sectionObserver = new IntersectionObserver((entries, observer) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("animated");
+					observer.unobserve(entry.target);
+				}
+			});
+		}, sectionOptions);
+
+		toAnimateSections.forEach((section) => {
+			sectionObserver.observe(section);
+		});
+	} else {
+		toAnimateSections.forEach((section) =>
+			section.classList.remove("to-animate")
+		);
+	}
+
 	// HANDLE BACK TO TOP
 
 	const backToTopArrowBtn = document.querySelector(".back-to-top");
