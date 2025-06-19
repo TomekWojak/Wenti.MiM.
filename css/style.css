@@ -2009,6 +2009,7 @@ nav {
   }
   .header__content {
     width: 100%;
+    animation-delay: 0;
   }
   .header__img {
     position: absolute;
@@ -2019,7 +2020,7 @@ nav {
     height: auto;
   }
   .header__img.animated {
-    animation: heroAnimated 1s 0.4s forwards;
+    animation: heroAnimated 0.8s 0.2s forwards;
   }
   .header__cta, .header__reviews-btn {
     position: relative;

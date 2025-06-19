@@ -165,6 +165,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	const allReviews = document.querySelectorAll(".reviews__box");
 	let reviewsSpeed = 5000;
 	let reviewsIndex = 0;
+	let startX;
+	let endX;
+	let reviewsCarousellInterval;
 
 	const handleReviewsCarousell = () => {
 		let step = window.innerWidth >= 800 ? 50 : 100;
@@ -187,7 +190,35 @@ document.addEventListener("DOMContentLoaded", function () {
 		reviewsBox.style.transform = `translateX(${-width}%)`;
 	});
 
-	setInterval(handleReviewsCarousell, reviewsSpeed);
+	reviewsCarousellInterval = setInterval(handleReviewsCarousell, reviewsSpeed);
+
+	reviewsBox.addEventListener("touchstart", (e) => {
+		startX = e.touches[0].clientX;
+		clearInterval(reviewsCarousellInterval);
+	});
+	reviewsBox.addEventListener("touchend", (e) => {
+		endX = e.changedTouches[0].clientX;
+		handleSwipe();
+		reviewsCarousellInterval = setInterval(
+			handleReviewsCarousell,
+			reviewsSpeed
+		);
+	});
+
+	const handleSwipe = () => {
+		const threshold = 50;
+		const width = window.innerWidth >= 800 ? 50 : 100;
+		const maxIndex =
+			window.innerWidth >= 800 ? allReviews.length - 2 : allReviews.length - 1;
+
+		if (startX - endX > threshold && reviewsIndex < maxIndex) {
+			reviewsIndex++;
+		} else if (endX - startX > threshold && reviewsIndex > 0) {
+			reviewsIndex--;
+		}
+
+		reviewsBox.style.transform = `translateX(${-width * reviewsIndex}%)`;
+	};
 
 	// ACCORDION
 	const allAccordionBtns = document.querySelectorAll(

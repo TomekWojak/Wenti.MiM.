@@ -66,6 +66,7 @@ nav {
 .animated {
 	animation: sectionAnimated 0.4s 0.2s forwards;
 }
+
 // HEADER
 .header {
 	background: linear-gradient(180deg, var(--lightBLue), var(--purple) 80%);
@@ -1117,6 +1118,7 @@ nav {
 			gap: 7em;
 		}
 	}
+
 	.reviews {
 		&__reviews {
 			justify-content: space-between;
@@ -1153,6 +1155,7 @@ nav {
 		}
 		&__content {
 			width: 100%;
+			animation-delay: 0;
 		}
 		&__img {
 			position: absolute;
@@ -1163,7 +1166,7 @@ nav {
 			height: auto;
 
 			&.animated {
-				animation: heroAnimated 1s 0.4s forwards;
+				animation: heroAnimated 0.8s 0.2s forwards;
 			}
 		}
 		&__cta,
