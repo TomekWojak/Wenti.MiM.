@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const reviewsBox = document.querySelector(".reviews__reviews");
 	const allReviews = document.querySelectorAll(".reviews__box");
-	let reviewsSpeed = 5000;
+	let reviewsSpeed = 4000;
 	let reviewsIndex = 0;
 	let startX;
 	let endX;

@@ -135,13 +135,14 @@
 	opacity: 0.6;
 	filter: blur(10px);
 
-	&--square {
+	&--green {
 		background-color: #3eb489;
 		bottom: 10%;
 		left: 30%;
+		border-radius: 50%;
 		animation: contactBgGreen 10s infinite alternate;
 	}
-	&--circle {
+	&--red {
 		background-color: #ff6b6b;
 		border-radius: 50%;
 		top: 10%;
@@ -234,7 +235,7 @@
 	overflow: hidden;
 	&-content {
 		padding: 10em 2em 5em;
-		max-width: 1000px;
+		max-width: 1100px;
 		margin: 0 auto;
 	}
 	&__header {
@@ -288,7 +289,7 @@
 	width: 100%;
 	padding: 1.5em;
 	background-color: rgba(255, 255, 255, 0.4);
-	border: 1px solid var(--pureBlack);
+	border: 1px solid rgb(185, 185, 185);
 	border-radius: 3px;
 	font-weight: 500;
 	font-size: 1rem;
@@ -382,7 +383,7 @@ label:not(.agreement-label, .options-label) {
 	background-color: rgba(255, 255, 255, 0.4);
 	border-radius: 3px;
 	font-size: clamp(1.1rem, 3vw, 1.3rem);
-	border: 1px solid var(--pureBlack);
+	border: 1px solid rgb(185, 185, 185);
 	font-weight: 500;
 	backdrop-filter: blur(10px);
 	color: var(--graphite);
@@ -624,6 +625,9 @@ input[type="checkbox"].agreement-input {
 	}
 	.contact-form-btn {
 		font-size: 1.4rem;
+	}
+	.contact-form {
+		padding: 4em 3em;
 	}
 }
 

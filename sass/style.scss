@@ -449,6 +449,7 @@ nav {
 		flex-shrink: 0;
 		background-color: var(--pureWhite);
 		border-radius: 10px;
+		transform: scale(0.95);
 	}
 	&__box-head {
 		display: flex;
