@@ -15,12 +15,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Skontaktuj się z nami – montaż rekuperacji, klimatyzacji i hydrauliki. Sprzedaż zestawów do samodzielnego montażu. Fachowe doradztwo!">
+        content="Dowiedz się, jak przetwarzamy Twoje dane osobowe na stronie wentimim.pl. Sprawdź informacje o administratorze, celach przetwarzania, Google Analytics i Twoich prawach.">
     <link rel="icon" href="./images/favicon.ico">
+    <link rel="canonical" href="https://wentimim.pl">
     <link rel="apple-touch-icon" href="./images/WentiMiM-apple-touch-icon.png">
-    <title>Wenti.MiM – Formularz kontaktowy</title>
+    <title>Wenti.MiM - Polityka prywatności</title>
     <script src="./js/subpage-script.js" defer></script>
-    <script src="./js/contact.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <!-- Google tag (gtag.js) -->
@@ -68,126 +68,57 @@
         </div>
     </header>
     <main>
-        <section class="form-section">
-            <div class="form-section-content">
-                <div class="form-section__header">
-                    <h1 class="form-section__title">Skontaktuj się z nami</h1>
-                    <p class="form-section__info">
-                        Wypełnij poniższy formularz kontaktowy, podając niezbędne dane. Specjalista skontaktuje się z
-                        Panią/Panem w celu omówienia szczegółów.
-                    </p>
-                </div>
-                <div class="form-section-body">
+        <section class="privacy-policy">
+            <div class="privacy-policy__content wrapper">
+                <p class="privacy-policy__title">
+                    <strong>Administrator Twoich danych osobowych</strong>
+                </p>
+                <p class="privacy-policy__info privacy-policy__info-mid">Administratorem jest firma Wenti.MiM Mateusz
+                    Nigbór, Budy Łańcuckie 115,
+                    37-114 Budy Łańcuckie
+                <p class="privacy-policy__info privacy-policy__info-mid">NIP: 8151708706</p>
+                <p class="privacy-policy__info privacy-policy__info-mid">email: wenti.mim@gmail.com</p>
+                </p>
+                <p class="privacy-policy__title">
+                    <strong>Kiedy i w jakim celu zbierane są Twoje dane?</strong>
+                </p>
+                <p class="privacy-policy__info">Twoje dane zbieramy podczas korzystania z formularza kontaktowego na
+                    naszej stronie.
+                    Zebrane dane przetwarzane są wyłącznie w celach kontaktowych. Nie sprzedajemy ich, ani nie
+                    udostępniamy nikomu.
+                </p>
+                <p class="privacy-policy__title">
+                    <strong>Google Analytics</strong>
+                </p>
+                <p class="privacy-policy__info">
 
-                    <form action="mail.php" method="post" class="contact-form">
 
 
-                        <div class="contact-form-box">
 
-                            <div class="contact-form-box-name form-box">
-                                <input type="text" id="name-input" class="input name-input" name="name" required>
-                                <label for="name-input" class="name-label">Imię</label>
-                                <p class="contact-form-box-error contact-form-box-name-error"></p>
-                            </div>
-                            <div class="contact-form-box-phone form-box">
-                                <input type="tel" id="phone-input" class="input phone-input" name="phone" required>
-                                <label for="phone-input" class="phone-label">Numer telefonu</label>
-                                <p class="contact-form-box-error contact-form-box-phone-error"></p>
-                            </div>
-                        </div>
-                        <div class="contact-form-box-email form-box">
-                            <input type="email" id="email-input" class="input email-input" name="email" required>
-                            <label for="email-input" class="email-label">E-mail</label>
-                            <p class="contact-form-box-error contact-form-box-email-error"></p>
-                        </div>
-                        <div class="contact-form-box-area form-box">
-                            <input type="number" id="area-input" class="input area-input" name="area" required>
-                            <label for="area-input" class="area-label">Powierzchnia użytkowa w m2</label>
-                            <p class="contact-form-box-error contact-form-box-area-error"></p>
-                        </div>
-                        <div class="contact-form-box-tiers form-box">
-                            <input type="number" id="tiers-input" class="input tiers-input" name="tiers" required>
-                            <label for="tiers-input" class="tiers-label">Ilość kondygnacji</label>
-                            <p class="contact-form-box-error contact-form-box-tiers-error"></p>
-                        </div>
-                        <textarea id="contact-form-textarea" class="contact-form-textarea" name="msg"
-                            placeholder="Dodatkowe informacje (opcjonalnie)"></textarea>
-
-                        <div class="contact-form-question-box form-box">
-                            <p class="contact-form-question">Czy posiada Pan/Pani projekt?</p>
-                            <div class="contact-form-box-options">
-
-                                <input type="radio" name="question-1" id="option-1-positive" class="option-1 input-1"
-                                    required value="yes">
-                                <label for="option-1-positive" class="options-label" tabindex="0">Tak</label>
-
-                                <input type="radio" name="question-1" id="option-2-negative" class="option-2 input-2"
-                                    value="no">
-                                <label for="option-2-negative" class="options-label" tabindex="0">Nie</label>
-
-                                <p class="contact-form-box-question-error contact-form-box-question1-error"></p>
-                            </div>
-                        </div>
-                        <div class="contact-form-question-box form-box">
-                            <p class="contact-form-question">Czy instalacja będzie znajdowała się w wylewce?</p>
-                            <div class="contact-form-box-options">
-
-                                <input type="radio" name="question-2" id="option-3-positive" class="option-1" required
-                                    value="yes">
-                                <label for="option-3-positive" class="options-label" tabindex="0">Tak</label>
-
-                                <input type="radio" name="question-2" id="option-4-negative" class="option-2"
-                                    value="no">
-                                <label for="option-4-negative" class="options-label" tabindex="0">Nie</label>
-
-                                <p class="contact-form-box-question-error contact-form-box-question2-error"></p>
-                            </div>
-                        </div>
-
-                        <div class="contact-form-question-box form-box">
-                            <p class="contact-form-question">Czy instalacja będzie podwieszona pod sufitem?</p>
-                            <div class="contact-form-box-options">
-
-                                <input type="radio" name="question-3" id="option-4-positive" class="option-1" required
-                                    value="yes">
-                                <label for="option-4-positive" class="options-label" tabindex="0">Tak</label>
-
-                                <input type="radio" name="question-3" id="option-5-negative" class="option-2"
-                                    value="no">
-                                <label for="option-5-negative" class="options-label" tabindex="0">Nie</label>
-
-                                <p class="contact-form-box-question-error contact-form-box-question3-error"></p>
-                            </div>
-                        </div>
-                        <div class="form-divider"></div>
-                        <div class="agreements form-box">
-                            <input type="checkbox" class="agreement-input" id="agreement-input" name="agreement-input"
-                                required>
-                            <label for="agreement-input" class="agreement-label">Wyrażam zgodę na przetwarzanie moich
-                                danych
-                                osobowych, w celu
-                                uzyskania kontaktu, na zasadach i w zakresie określonym w <a href=""
-                                    class="privacy-policy">Polityce prywatności.</a></label>
-                        </div>
-                        <button type="submit" class="contact-form-btn">Wyślij wiadomość</button>
-                    </form>
-
-                </div>
-                <div class="msg-status">
-                    <p class="msg-status__info"></p>
-                </div>
+                    Nasza strona internetowa wentimim.pl korzysta z narzędzia Google Analytics. Google Analytics pozwala
+                    nam analizować sposób korzystania użytkowników z naszej witryny – na przykład, które strony są
+                    najczęściej odwiedzane lub ile czasu użytkownicy na nich spędzają.
+                    Dane zbierane przez Google Analytics obejmują m.in. adres IP, typ przeglądarki, system operacyjny,
+                    czas spędzony na stronie oraz odwiedzane podstrony. Informacje te są zbierane w sposób anonimowy i
+                    służą wyłącznie celom statystycznym oraz ulepszaniu funkcjonowania strony.
+                    Podstawą prawną przetwarzania tych danych jest nasz uzasadniony interes, polegający na prowadzeniu
+                    statystyk oraz analizie zachowań użytkowników w celu optymalizacji treści i funkcjonalności serwisu.
+                </p>
             </div>
+            <img width="2115" height="142" loading="lazy" src="./images/svg/questions-bottom-bg.svg" alt=""
+                class="privacy-policy-bottom-bg section-divider">
         </section>
-        <button class="back-to-top" aria-label="Wróć na górę" onclick="void(0)">
-            <img width="24" height="24" src="./images/svg/chevron-up.svg" alt="" class="back-to-top-icon">
-        </button>
-        <a rel="noopener" target="_blank" href="https://www.facebook.com/profile.php?id=100057550925215"
-            class="facebook-link" aria-label="Link do strony Wenti MiM na Facebooku">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg>
-        </a>
+    </main>
+    <button class="back-to-top" aria-label="Wróć na górę" onclick="void(0)">
+        <img width="24" height="24" src="./images/svg/chevron-up.svg" alt="" class="back-to-top-icon">
+    </button>
+    <a rel="noopener" target="_blank" href="https://www.facebook.com/profile.php?id=100057550925215"
+        class="facebook-link" aria-label="Link do strony Wenti MiM na Facebooku">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+        </svg>
+    </a>
     </main>
     <footer class="footer">
         <div class="footer__content wrapper">
@@ -206,11 +137,12 @@
                     <li class="footer__list-item"><a href="polityka-prywatnosci.html" class="footer__link">Polityka
                             prywatności</a></li>
                     <li class="footer__list-item"><a href="index.html#FAQ" class="footer__link">FAQ</a>
+                    </li>
                 </ul>
             </div>
 
             <div class="footer__box">
-                <h2 class="footer__title">Adres i dane</h2>
+                <h5 class="footer__title">Adres i dane</h5>
                 <ul class="footer__list">
                     <li class="footer__list-item"><img width="24" height="24" loading="lazy"
                             src="./images/svg/map-pin.svg" alt="" class="footer__icon"> Budy
@@ -225,7 +157,7 @@
                 </ul>
             </div>
             <div class="footer__box">
-                <h2 class="footer__title">Godziny otwarcia</h2>
+                <h5 class="footer__title">Godziny otwarcia</h5>
                 <div class="footer__box-container">
                     <div class="footer__hours-box">
                         <div class="footer__hours-box-small">
@@ -255,7 +187,7 @@
                 </div>
             </div>
             <div class="footer__box">
-                <h2 class="footer__title">Obszar działania</h2>
+                <h5 class="footer__title">Obszar działania</h5>
                 <div class="footer__area-box">
                     <div class="footer__area">
                         <p class="footer__area-info">Rzeszów</p>

@@ -192,8 +192,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		if (!hasError) {
 			document.querySelector(".contact-form").submit();
-		} else {
-			console.log("Są błędy — formularz nie zostanie wysłany.");
 		}
 	};
 

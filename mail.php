@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $message .= "Czy instalacja będzie podwieszona pod sufitem: $question3\n";
     $message .= "Dodatkowe informacje:\n$msg";
 
-    $headers = "From: Formularz Wenti MiM <wenti.mim@gmail.com>\r\n";
+    $headers = "From: Formularz Wenti MiM <mateusz-nigbor@wentimim.pl>\r\n";
     $headers .= "Reply-To: $email\r\n";
 
     if (mail($to, $subject, $message, $headers)) {
