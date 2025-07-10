@@ -1056,15 +1056,15 @@ nav {
 		&__link:hover #fanPillarRight,
 		&__link:hover #chimney,
 		&__link:hover #recWall {
-			fill: var(--accentBlue) !important;
+			fill: var(--lightBLue) !important;
 		}
 		&__link:hover #wodkanBorder {
-			fill: #007acc70 !important;
+			fill: #007bff55 !important;
 		}
 		&__link:hover #wodkanMiddle,
 		&__link:hover #wodkanLeft,
 		&__link:hover #wodkanRight {
-			fill: #29a3f58c !important;
+			fill: #007bff6f !important;
 		}
 		#fan,
 		#recFan {
@@ -1128,6 +1128,24 @@ nav {
 		}
 		&__box {
 			width: 50%;
+		}
+		&__box:nth-child(4) {
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 2em;
+
+			.footer__title {
+				margin: 0;
+			}
+		}
+		&__area {
+			margin: 0;
+		}
+		&__area-box {
+			display: flex;
+			gap: 2em;
 		}
 	}
 	.conditioning__content,
@@ -1708,22 +1726,7 @@ nav {
 			width: 25%;
 		}
 		&__box:nth-child(4) {
-			display: flex;
-			justify-content: flex-start;
-			flex-direction: column;
 			align-items: center;
-			gap: 2em;
-
-			.footer__title {
-				margin: 0;
-			}
-		}
-		&__area {
-			margin: 0;
-		}
-		&__area-box {
-			display: flex;
-			gap: 2em;
 		}
 	}
 }

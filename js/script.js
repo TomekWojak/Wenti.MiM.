@@ -193,10 +193,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	reviewsCarousellInterval = setInterval(handleReviewsCarousell, reviewsSpeed);
 
 	reviewsBox.addEventListener("touchstart", (e) => {
+		e.preventDefault();
 		startX = e.touches[0].clientX;
 		clearInterval(reviewsCarousellInterval);
 	});
 	reviewsBox.addEventListener("touchend", (e) => {
+		e.preventDefault();
 		endX = e.changedTouches[0].clientX;
 		handleSwipe();
 		reviewsCarousellInterval = setInterval(

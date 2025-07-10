@@ -161,22 +161,22 @@
 
 @keyframes contactBgRed {
 	from {
-		opacity: 0.6;
+		opacity: 0.45;
 		transform: scale(0.9) translateY(0);
 	}
 	to {
-		opacity: 0.3;
+		opacity: 0.2;
 		transform: scale(1.2) translateY(50px);
 	}
 }
 
 @keyframes contactBgGreen {
 	from {
-		opacity: 0.6;
+		opacity: 0.45;
 		transform: scale(0.9) translateY(0);
 	}
 	to {
-		opacity: 0.3;
+		opacity: 0.2;
 		transform: scale(1.2) translateY(-50px);
 	}
 }

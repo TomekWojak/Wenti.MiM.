@@ -132,7 +132,7 @@
 	height: 50px;
 	z-index: -1;
 	transform: scale(0.9);
-	opacity: 0.6;
+	opacity: 0.45;
 	filter: blur(10px);
 
 	&--green {
@@ -212,10 +212,10 @@
 	transition: top 1s;
 }
 .msg-status.success {
-	top: 10%;
+	top: 20%;
 }
 .msg-status.error {
-	top: 10%;
+	top: 20%;
 	background-color: #ff6b6b;
 }
 .msg-status__info {
@@ -403,7 +403,7 @@ input[type="checkbox"].agreement-input {
 	font-weight: normal;
 	font-size: clamp(1.1rem, 3vw, 1.3rem);
 }
-.privacy-policy {
+.privacy-policy-link {
 	color: var(--graphite);
 	font-weight: 500;
 }
@@ -665,6 +665,8 @@ input[type="checkbox"].agreement-input {
 		}
 	}
 	.contact__box-bg-shape {
+		width: 60px;
+		height: 60px;
 		&--square {
 			width: 70px;
 			bottom: 5%;

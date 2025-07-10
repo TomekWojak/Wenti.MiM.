@@ -12,17 +12,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $to = "wenti.mim@gmail.com";
     $subject = "Nowa wiadomość z formularza kontaktowego na stronie Wenti MiM";
-    $message = "Imię: $name\n";
-    $message .= "Numer telefonu: $phone\n";
-    $message .= "Email: $email\n";
-    $message .= "Powierzchnia użytkowa: $area\n";
-    $message .= "Ilość kondygnacji: $tiers\n";
-    $message .= "Czy klient posiada projekt: $question1\n";
-    $message .= "Czy instalacja będzie znajdowała się w wylewce: $question2\n";
-    $message .= "Czy instalacja będzie podwieszona pod sufitem: $question3\n";
-    $message .= "Dodatkowe informacje:\n$msg";
 
-    $headers = "From: Formularz Wenti MiM <mateusz-nigbor@wentimim.pl>\r\n";
+    $message = "
+    <html>
+    <head><meta charset='UTF-8'></head>
+    <body>
+        <p>Imię: <b>$name</b></p>
+        <p>Numer telefonu: <b>$phone</b></p>
+        <p>Email: <b>$email</b></p>
+        <p>Powierzchnia użytkowa: <b>$area m<sup>2</sup></b></p>
+        <p>Ilość kondygnacji: <b>$tiers</b></p>
+        <p>Czy klient posiada projekt: <b>$question1</b></p>
+        <p>Czy instalacja będzie znajdowała się w wylewce: <b>$question2</b></p>
+        <p>Czy instalacja będzie podwieszona pod sufitem: <b>$question3</b></p>
+        <p>Dodatkowe informacje:<br>$msg</p>
+    </body>
+    </html>";
+
+    $headers = "MIME-Version: 1.0\r\n";
+    $headers .= "Content-type: text/html; charset=UTF-8\r\n";
+    $headers .= "From: Formularz Wenti MiM <mateusz-nigbor@wentimim.pl>\r\n";
     $headers .= "Reply-To: $email\r\n";
 
     if (mail($to, $subject, $message, $headers)) {
