@@ -61,8 +61,6 @@
 	width: 60px;
 	padding: 0.8em;
 	position: fixed;
-	top: 50%;
-	transform: translateY(-50%);
 	right: -26px;
 	text-decoration: none;
 	z-index: 1000;
@@ -74,18 +72,11 @@
 	}
 }
 .instagram-link {
-	top: 56%;
-	transform: translateY(-50%);
-	background: linear-gradient(
-		45deg,
-		#f09433,
-		#e6683c,
-		#dc2743,
-		#cc2366,
-		#bc1888
-	);
+	top: 360px;
+	background-color: #e1306c;
 }
 .facebook-link {
+	top: 320px;
 	background-color: #1877f2;
 }
 .social-link:hover {
