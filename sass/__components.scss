@@ -57,14 +57,13 @@
 	display: none;
 }
 
-.facebook-link {
+.social-link {
 	width: 60px;
 	padding: 0.8em;
 	position: fixed;
 	top: 50%;
 	transform: translateY(-50%);
 	right: -26px;
-	background-color: var(--accentBlue);
 	text-decoration: none;
 	z-index: 1000;
 	transition: transform 0.3s;
@@ -74,7 +73,22 @@
 		height: 18px;
 	}
 }
-.facebook-link:hover {
+.instagram-link {
+	top: 56%;
+	transform: translateY(-50%);
+	background: linear-gradient(
+		45deg,
+		#f09433,
+		#e6683c,
+		#dc2743,
+		#cc2366,
+		#bc1888
+	);
+}
+.facebook-link {
+	background-color: #1877f2;
+}
+.social-link:hover {
 	transform: translate(-15px, -50%);
 }
 
@@ -599,7 +613,7 @@ input[type="checkbox"].agreement-input {
 		opacity: 0.7;
 	}
 
-	.facebook-link {
+	.social-link {
 		right: -22px;
 
 		svg {
