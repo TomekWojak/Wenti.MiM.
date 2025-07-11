@@ -772,31 +772,31 @@ input[type=checkbox].agreement-input:focus-visible {
     z-index: -1;
   }
   .rec-pattern-bg:first-child {
-    top: 29%;
+    top: 31%;
     right: 20%;
     opacity: 0.6;
     animation: rotateLeft 50s infinite;
   }
   .pattern-bg:first-child {
-    top: 65%;
+    top: 69%;
     left: 4em;
     opacity: 0.6;
     animation: upAndDown 3s infinite alternate;
   }
   .pattern-bg:nth-child(2) {
-    top: 62%;
+    top: 66%;
     right: 18%;
     transform: scale(0.7);
   }
   .pattern-bg:nth-child(3) {
-    top: 80%;
+    top: 85%;
     left: 58%;
     width: 30px;
     animation: bgAnimation 10s infinite alternate;
   }
   .pattern-bg:nth-child(4) {
     width: 45px;
-    top: 50%;
+    top: 53%;
     left: 45%;
     opacity: 0.8;
   }
@@ -808,12 +808,12 @@ input[type=checkbox].agreement-input:focus-visible {
   }
   .rec-pattern-bg:nth-child(2) {
     opacity: 0.6;
-    top: 80%;
+    top: 86%;
     right: 20%;
   }
   .rec-pattern-bg:nth-child(3) {
     left: 7%;
-    top: 72%;
+    top: 77%;
     opacity: 0.5;
   }
   .contact__box-bg-shape {
@@ -1499,6 +1499,13 @@ nav {
   line-height: 180%;
   font-size: clamp(1.35rem, 2.6vw, 1.5rem);
 }
+.questions__accordion-answer-text a {
+  text-decoration: none;
+  color: var(--accentBlue);
+}
+.questions__accordion-answer-text a:hover {
+  text-decoration: underline;
+}
 
 .footer {
   background-color: var(--footerColor);
@@ -1640,9 +1647,20 @@ nav {
 .conditioning__content,
 .recuperation__content,
 .water__content {
-  padding: 8em 2em 15em;
+  padding: 8em 2em 0;
   position: relative;
   z-index: 0;
+}
+
+.conditioning__questions,
+.recuperation__questions,
+.water__questions {
+  padding: 3em 2em 12em;
+}
+.conditioning__questions .wrapper,
+.recuperation__questions .wrapper,
+.water__questions .wrapper {
+  max-width: 1100px;
 }
 
 .conditioning__subtitle,
@@ -1666,6 +1684,12 @@ nav {
   margin-block-start: 3em;
   font-size: clamp(1.8rem, 5vw, 3rem);
   font-weight: 700;
+  color: var(--graphite);
+}
+.conditioning__title--accordion,
+.recuperation__title--accordion,
+.water__title--accordion {
+  margin-block-end: 2em;
 }
 .conditioning__title--bottom,
 .recuperation__title--bottom,
@@ -1865,6 +1889,11 @@ nav {
   .privacy-policy {
     padding: 10em 2em 15em;
   }
+  .conditioning__questions,
+  .recuperation__questions,
+  .water__questions {
+    padding: 5em 2em 18em;
+  }
 }
 @media (700px <= width) {
   .recuperation__img-container {
@@ -2000,7 +2029,12 @@ nav {
   .conditioning__content,
   .recuperation__content,
   .water__content {
-    padding: 10em 4em 25em;
+    padding: 10em 4em 0;
+  }
+  .conditioning__questions,
+  .recuperation__questions,
+  .water__questions {
+    padding: 5em 4em 20em;
   }
   .conditioning__container {
     margin: 6em 0 10em;
@@ -2323,6 +2357,11 @@ nav {
   .recuperation__subtitle:first-of-type {
     margin-block-start: 2em;
   }
+  .conditioning__questions,
+  .recuperation__questions,
+  .water__questions {
+    padding: 10em 4em 20em;
+  }
 }
 @media (992px <= width) {
   section {
@@ -2380,7 +2419,7 @@ nav {
   .conditioning__content,
   .recuperation__content,
   .water__content {
-    padding: 6em 4em 30em;
+    padding: 6em 4em 8em;
   }
   .conditioning__box {
     display: flex;
@@ -2411,7 +2450,7 @@ nav {
     justify-content: flex-end;
     margin: 12em 0 20em;
   }
-  .conditioning__title:first-child {
+  .conditioning__title:first-child:not(.conditioning__title--accordion) {
     margin: 0;
   }
   .conditioning__title--bottom {
@@ -2525,6 +2564,11 @@ nav {
   }
   .footer__box:nth-child(4) {
     align-items: center;
+  }
+  .conditioning__questions,
+  .recuperation__questions,
+  .water__questions {
+    padding: 10em 4em 35em;
   }
 }
 @media (1250px <= width) {

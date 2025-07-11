@@ -624,6 +624,15 @@ nav {
 		padding: 2em 1em;
 		line-height: 180%;
 		font-size: clamp(1.35rem, 2.6vw, 1.5rem);
+
+		a {
+			text-decoration: none;
+			color: var(--accentBlue);
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }
 
@@ -783,9 +792,18 @@ nav {
 .conditioning__content,
 .recuperation__content,
 .water__content {
-	padding: 8em 2em 15em;
+	padding: 8em 2em 0;
 	position: relative;
 	z-index: 0;
+}
+.conditioning__questions,
+.recuperation__questions,
+.water__questions {
+	padding: 3em 2em 12em;
+
+	.wrapper {
+		max-width: 1100px;
+	}
 }
 .conditioning__subtitle,
 .recuperation__subtitle,
@@ -805,7 +823,10 @@ nav {
 		margin-block-start: 3em;
 		font-size: clamp(1.8rem, 5vw, 3rem);
 		font-weight: 700;
-
+		color: var(--graphite);
+		&--accordion {
+			margin-block-end: 2em;
+		}
 		&--bottom {
 			margin-block-start: 3em;
 		}
@@ -1006,6 +1027,11 @@ nav {
 	.privacy-policy {
 		padding: 10em 2em 15em;
 	}
+	.conditioning__questions,
+	.recuperation__questions,
+	.water__questions {
+		padding: 5em 2em 18em;
+	}
 }
 @media (700px <= width) {
 	.recuperation {
@@ -1164,7 +1190,12 @@ nav {
 	.conditioning__content,
 	.recuperation__content,
 	.water__content {
-		padding: 10em 4em 25em;
+		padding: 10em 4em 0;
+	}
+	.conditioning__questions,
+	.recuperation__questions,
+	.water__questions {
+		padding: 5em 4em 20em;
 	}
 	.conditioning {
 		&__container {
@@ -1507,6 +1538,11 @@ nav {
 			margin-block-start: 2em;
 		}
 	}
+	.conditioning__questions,
+	.recuperation__questions,
+	.water__questions {
+		padding: 10em 4em 20em;
+	}
 }
 
 @media (992px <= width) {
@@ -1577,7 +1613,7 @@ nav {
 	.conditioning__content,
 	.recuperation__content,
 	.water__content {
-		padding: 6em 4em 30em;
+		padding: 6em 4em 8em;
 	}
 
 	.conditioning {
@@ -1612,7 +1648,7 @@ nav {
 			}
 		}
 		&__title {
-			&:first-child {
+			&:first-child:not(.conditioning__title--accordion) {
 				margin: 0;
 			}
 			&--bottom {
@@ -1743,6 +1779,11 @@ nav {
 		&__box:nth-child(4) {
 			align-items: center;
 		}
+	}
+	.conditioning__questions,
+	.recuperation__questions,
+	.water__questions {
+		padding: 10em 4em 35em;
 	}
 }
 
