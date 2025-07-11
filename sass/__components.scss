@@ -80,7 +80,7 @@
 	background-color: #1877f2;
 }
 .social-link:hover {
-	transform: translate(-15px, -50%);
+	transform: translateX(-15px);
 }
 
 .back-to-top {
@@ -537,73 +537,6 @@ input[type="checkbox"].agreement-input {
 		padding: 7em 4em;
 	}
 
-	.pattern-bg,
-	.rec-pattern-bg {
-		display: block;
-		position: absolute;
-		width: 35px;
-		height: auto;
-		z-index: -1;
-	}
-
-	.rec-pattern-bg:first-child {
-		top: 30%;
-		right: 20%;
-		opacity: 0.6;
-		animation: rotateLeft 50s infinite;
-	}
-	.rec-pattern-bg:nth-child(2) {
-		top: 15%;
-		left: 40%;
-		opacity: 0.8;
-	}
-	.rec-pattern-bg:nth-child(3) {
-		top: 63%;
-		left: 10%;
-		opacity: 0.5;
-	}
-	.rec-pattern-bg:nth-child(4) {
-		top: 79%;
-		left: 55%;
-		opacity: 0.8;
-		animation: rotateLeft 70s infinite;
-	}
-	.rec-pattern-bg:nth-child(5) {
-		width: 25px;
-		top: 78%;
-		left: 5%;
-		opacity: 0.5;
-	}
-
-	.pattern-bg:first-child {
-		top: 62%;
-		left: 4em;
-		opacity: 0.6;
-		animation: upAndDown 3s infinite alternate;
-	}
-	.pattern-bg:nth-child(2) {
-		top: 60%;
-		right: 10%;
-	}
-	.pattern-bg:nth-child(3) {
-		top: 78%;
-		left: 60%;
-		width: 30px;
-		animation: bgAnimation 10s infinite alternate;
-	}
-	.pattern-bg:nth-child(4) {
-		width: 40px;
-		top: 47%;
-		left: 42%;
-		opacity: 0.8;
-	}
-	.pattern-bg:nth-child(5) {
-		width: 35px;
-		top: 76%;
-		left: 8%;
-		opacity: 0.7;
-	}
-
 	.social-link {
 		right: -22px;
 
@@ -636,38 +569,61 @@ input[type="checkbox"].agreement-input {
 }
 
 @media (1100px <= width) {
+	.pattern-bg,
+	.rec-pattern-bg {
+		display: block;
+		position: absolute;
+		width: 35px;
+		height: auto;
+		z-index: -1;
+	}
+
+	.rec-pattern-bg:first-child {
+		top: 29%;
+		right: 20%;
+		opacity: 0.6;
+		animation: rotateLeft 50s infinite;
+	}
+
+	.pattern-bg:first-child {
+		top: 65%;
+		left: 4em;
+		opacity: 0.6;
+		animation: upAndDown 3s infinite alternate;
+	}
+	.pattern-bg:nth-child(2) {
+		top: 62%;
+		right: 18%;
+		transform: scale(.7);
+	}
+	.pattern-bg:nth-child(3) {
+		top: 80%;
+		left: 58%;
+		width: 30px;
+		animation: bgAnimation 10s infinite alternate;
+	}
+	.pattern-bg:nth-child(4) {
+		width: 45px;
+		top: 50%;
+		left: 45%;
+		opacity: 0.8;
+	}
+	.pattern-bg:nth-child(5) {
+		width: 35px;
+		top: 78%;
+		left: 10%;
+		opacity: 0.7;
+	}
+
 	.rec-pattern-bg:nth-child(2) {
 		opacity: 0.6;
+		top: 80%;
+		right: 20%;
 	}
 	.rec-pattern-bg:nth-child(3) {
-		left: 17%;
+		left: 7%;
+		top: 72%;
 		opacity: 0.5;
-	}
-	.rec-pattern-bg:nth-child(4) {
-		top: 79%;
-		left: 60%;
-	}
-	.rec-pattern-bg:nth-child(5) {
-		width: 30px;
-	}
-	.pattern-bg {
-		&:nth-child(2) {
-			top: 60%;
-			right: 20%;
-		}
-
-		&:nth-child(3) {
-			left: 75%;
-		}
-		&:nth-child(4) {
-			width: 45px;
-			top: 46%;
-			left: 45%;
-		}
-		&:nth-child(5) {
-			top: 77%;
-			left: 15%;
-		}
 	}
 	.contact__box-bg-shape {
 		width: 60px;
