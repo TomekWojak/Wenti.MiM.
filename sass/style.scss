@@ -399,7 +399,12 @@ nav {
 	&__content {
 		width: 90%;
 		max-width: 380px;
+	}
+	&__container {
 		overflow: hidden;
+	}
+	&__box {
+		position: relative;
 	}
 	&__images {
 		display: flex;
@@ -416,6 +421,37 @@ nav {
 		border-radius: 25px;
 		border: 2px solid rgba(255, 255, 255, 0.2);
 		filter: brightness(0.8);
+	}
+	&__btn {
+		position: absolute;
+		padding: 1em;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 100;
+		cursor: pointer;
+		transition: transform 0.3s;
+
+		&:hover .gallery__arrow {
+			transform: scale(1.05);
+		}
+		&:active .gallery__arrow {
+			transform: scale(0.95);
+		}
+
+		&.disabled {
+			opacity: 0.2;
+		}
+		&--next {
+			right: -3.5em;
+		}
+		&--prev {
+			left: -3.5em;
+		}
+	}
+	&__arrow {
+		width: 30px;
+		height: auto;
+		transition: transform 0.3s;
 	}
 }
 
@@ -857,6 +893,7 @@ nav {
 		display: block;
 		width: min(100%, 650px);
 		max-width: 100%;
+		height: auto;
 		margin-block-start: 2em;
 	}
 	&__box-img {
@@ -881,6 +918,10 @@ nav {
 		}
 		&--bottom {
 			background-image: url("../images/webp/air-conditioning-repairing-blurred.webp");
+
+			&-rec {
+				background-image: none;
+			}
 		}
 	}
 	&__img {
@@ -907,9 +948,6 @@ nav {
 
 		&--top {
 			background-image: url("../images/webp/recuperation-img-blurred.webp");
-		}
-		&--bottom {
-			background-image: url("../images/webp/recuperation-img-bottom-blurred.webp");
 		}
 	}
 	&__img {
@@ -1003,6 +1041,17 @@ nav {
 		&__content {
 			width: 80%;
 			max-width: 420px;
+		}
+		&__btn {
+			&--next {
+				right: -4em;
+			}
+			&--prev {
+				left: -4em;
+			}
+		}
+		&__arrow {
+			width: 35px;
 		}
 	}
 	.reviews {
@@ -1139,6 +1188,17 @@ nav {
 		padding: 18em 2em;
 		&__content {
 			max-width: 500px;
+		}
+		&__btn {
+			&--next {
+				right: -4em;
+			}
+			&--prev {
+				left: -4em;
+			}
+		}
+		&__arrow {
+			width: 35px;
 		}
 	}
 	.reviews {
@@ -1393,6 +1453,14 @@ nav {
 			transform: scale(1);
 			filter: brightness(1);
 		}
+		&__btn {
+			&--next {
+				right: -2em;
+			}
+			&--prev {
+				left: -2em;
+			}
+		}
 	}
 	.contact {
 		&__box {
@@ -1595,6 +1663,14 @@ nav {
 	}
 	.gallery {
 		padding: 25em 2em 20em;
+		&__btn {
+			&--next {
+				right: -2.5em;
+			}
+			&--prev {
+				left: -2.5em;
+			}
+		}
 	}
 	.questions {
 		&__accordion-box {
@@ -1794,9 +1870,34 @@ nav {
 }
 
 @media (1250px <= width) {
+	.gallery {
+		&__btn {
+			&--next {
+				right: -2em;
+			}
+			&--prev {
+				left: -2em;
+			}
+		}
+		&__arrow {
+			width: 45px;
+		}
+	}
 	.footer {
 		&__content {
 			padding: 5em 2em 0;
+		}
+	}
+}
+@media (1300px <= width) {
+	.gallery {
+		&__btn {
+			&--prev {
+				left: -4.5em;
+			}
+			&--next {
+				right: -4.5em;
+			}
 		}
 	}
 }

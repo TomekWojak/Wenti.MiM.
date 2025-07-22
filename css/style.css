@@ -290,7 +290,7 @@
   background-image: url("../images/webp/12CH35AEHI+white_details_09.webp");
 }
 .contact__small-box--recuperation {
-  background-color: var(--accentBlue);
+  background-image: url("../images/webp/12CH35AEHI+white_details_03.webp");
 }
 .contact__small-box--water {
   background-color: #427ed5;
@@ -819,11 +819,6 @@ input[type=checkbox].agreement-input:focus-visible {
     opacity: 0.7;
   }
   .rec-pattern-bg:nth-child(2) {
-    opacity: 0.6;
-    top: 86%;
-    right: 20%;
-  }
-  .rec-pattern-bg:nth-child(3) {
     left: 7%;
     top: 77%;
     opacity: 0.5;
@@ -1285,7 +1280,12 @@ nav {
 .gallery__content {
   width: 90%;
   max-width: 380px;
+}
+.gallery__container {
   overflow: hidden;
+}
+.gallery__box {
+  position: relative;
 }
 .gallery__images {
   display: flex;
@@ -1303,6 +1303,35 @@ nav {
   border-radius: 25px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   filter: brightness(0.8);
+}
+.gallery__btn {
+  position: absolute;
+  padding: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.gallery__btn:hover .gallery__arrow {
+  transform: scale(1.05);
+}
+.gallery__btn:active .gallery__arrow {
+  transform: scale(0.95);
+}
+.gallery__btn.disabled {
+  opacity: 0.2;
+}
+.gallery__btn--next {
+  right: -3.5em;
+}
+.gallery__btn--prev {
+  left: -3.5em;
+}
+.gallery__arrow {
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s;
 }
 
 .reviews {
@@ -1742,6 +1771,7 @@ nav {
   display: block;
   width: min(100%, 650px);
   max-width: 100%;
+  height: auto;
   margin-block-start: 2em;
 }
 .conditioning__box-img,
@@ -1778,6 +1808,11 @@ nav {
 .water__img-container--bottom {
   background-image: url("../images/webp/air-conditioning-repairing-blurred.webp");
 }
+.conditioning__img-container--bottom-rec,
+.recuperation__img-container--bottom-rec,
+.water__img-container--bottom-rec {
+  background-image: none;
+}
 .conditioning__img,
 .recuperation__img,
 .water__img {
@@ -1803,9 +1838,6 @@ nav {
 }
 .recuperation__img-container--top {
   background-image: url("../images/webp/recuperation-img-blurred.webp");
-}
-.recuperation__img-container--bottom {
-  background-image: url("../images/webp/recuperation-img-bottom-blurred.webp");
 }
 .recuperation__img {
   width: 100%;
@@ -1887,6 +1919,15 @@ nav {
   .gallery__content {
     width: 80%;
     max-width: 420px;
+  }
+  .gallery__btn--next {
+    right: -4em;
+  }
+  .gallery__btn--prev {
+    left: -4em;
+  }
+  .gallery__arrow {
+    width: 35px;
   }
   .reviews {
     padding: 8em 2em 18em;
@@ -2001,6 +2042,15 @@ nav {
   }
   .gallery__content {
     max-width: 500px;
+  }
+  .gallery__btn--next {
+    right: -4em;
+  }
+  .gallery__btn--prev {
+    left: -4em;
+  }
+  .gallery__arrow {
+    width: 35px;
   }
   .reviews {
     padding: 8em 2em 20em;
@@ -2226,6 +2276,12 @@ nav {
     transform: scale(1);
     filter: brightness(1);
   }
+  .gallery__btn--next {
+    right: -2em;
+  }
+  .gallery__btn--prev {
+    left: -2em;
+  }
   .contact__box {
     display: flex;
     justify-content: space-between;
@@ -2423,6 +2479,12 @@ nav {
   .gallery {
     padding: 25em 2em 20em;
   }
+  .gallery__btn--next {
+    right: -2.5em;
+  }
+  .gallery__btn--prev {
+    left: -2.5em;
+  }
   .questions__accordion-box {
     margin: 1.5em 0;
   }
@@ -2592,7 +2654,24 @@ nav {
   }
 }
 @media (1250px <= width) {
+  .gallery__btn--next {
+    right: -2em;
+  }
+  .gallery__btn--prev {
+    left: -2em;
+  }
+  .gallery__arrow {
+    width: 45px;
+  }
   .footer__content {
     padding: 5em 2em 0;
+  }
+}
+@media (1300px <= width) {
+  .gallery__btn--prev {
+    left: -4.5em;
+  }
+  .gallery__btn--next {
+    right: -4.5em;
   }
 }/*# sourceMappingURL=style.css.map */

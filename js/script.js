@@ -114,41 +114,63 @@ document.addEventListener("DOMContentLoaded", function () {
 	// GALLERY
 	const imagesBox = document.querySelector(".gallery__images");
 	const allImages = document.querySelectorAll(".gallery__img");
+	const nextBtn = document.querySelector(".gallery__btn--next");
+	const prevBtn = document.querySelector(".gallery__btn--prev");
 
 	let index = 1;
 	let step;
 	let width;
-	let intervalId;
-	let carousellSpeed = 3000;
 
-	const handleCarousell = () => {
-		if (index === allImages.length - 3) {
-			step = window.innerWidth >= 900 ? 33.33 : 100;
-			width = index * step;
-			imagesBox.style.transform = `translateX(${-width}%)`;
-			allImages[index + 1].classList.add("active");
-			allImages[index].classList.remove("active");
-			allImages[1].classList.add("active");
-			setTimeout(() => {
-				allImages[index + 1].classList.remove("active");
-				imagesBox.style.transform = `translateX(${-width}%)`;
-				index = 1;
-				imagesBox.style.transition = "none";
-				imagesBox.style.transform = `translateX(0)
-			`;
-			}, 1000);
+	const showNextSlide = () => {
+		if (index === allImages.length - 2) {
+			showNextImg();
+			nextBtn.classList.add("disabled");
+			nextBtn.setAttribute("disabled", "true");
 		} else {
-			imagesBox.style.transition = "transform 0.5s";
-			allImages[index].classList.remove("active");
-
-			index++;
-
-			allImages[index].classList.add("active");
-
-			step = window.innerWidth >= 900 ? 33.33 : 100;
-			width = (index - 1) * step;
-			imagesBox.style.transform = `translateX(${-width}%)`;
+			prevBtn.removeAttribute("disabled");
+			prevBtn.classList.remove("disabled");
+			nextBtn.classList.remove("disabled");
+			nextBtn.removeAttribute("disabled");
+			showNextImg();
 		}
+	};
+	const turnOnDisabled = () => {
+		if (window.innerWidth <= 900) {
+			prevBtn.classList.add("disabled");
+			prevBtn.setAttribute("disabled", "true");
+		}
+	};
+	const showPrevSlide = () => {
+		if (index === 1 && window.innerWidth >= 900) {
+			showPrevImg();
+			prevBtn.classList.add("disabled");
+			prevBtn.setAttribute("disabled", "true");
+		} else if (index === 2 && window.innerWidth < 900) {
+			showPrevImg();
+			prevBtn.classList.add("disabled");
+			prevBtn.setAttribute("disabled", "true");
+		} else {
+			nextBtn.classList.remove("disabled");
+			nextBtn.removeAttribute("disabled");
+			showPrevImg();
+		}
+	};
+	const showPrevImg = () => {
+		allImages[index].classList.remove("active");
+		index--;
+		allImages[index].classList.add("active");
+		step = window.innerWidth >= 900 ? 33.33 : 100;
+		width = (index - 1) * step;
+		imagesBox.style.transform = `translateX(${-width}%)`;
+	};
+	const showNextImg = () => {
+		allImages[index].classList.remove("active");
+		index++;
+
+		allImages[index].classList.add("active");
+		step = window.innerWidth >= 900 ? 33.33 : 100;
+		width = (index - 1) * step;
+		imagesBox.style.transform = `translateX(${-width}%)`;
 	};
 
 	window.addEventListener("resize", () => {
@@ -157,7 +179,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		imagesBox.style.transform = `translateX(${-width}%)`;
 	});
 
-	intervalId = setInterval(handleCarousell, carousellSpeed);
+	turnOnDisabled();
+	prevBtn.addEventListener("click", showPrevSlide);
+	nextBtn.addEventListener("click", showNextSlide);
 
 	// REVIEWS
 

@@ -127,7 +127,7 @@
 		background-image: url("../images/webp/12CH35AEHI+white_details_09.webp");
 	}
 	&--recuperation {
-		background-color: var(--accentBlue);
+		background-image: url("../images/webp/12CH35AEHI+white_details_03.webp");
 	}
 	&--water {
 		background-color: #427ed5;
@@ -632,11 +632,6 @@ input[type="checkbox"].agreement-input {
 	}
 
 	.rec-pattern-bg:nth-child(2) {
-		opacity: 0.6;
-		top: 86%;
-		right: 20%;
-	}
-	.rec-pattern-bg:nth-child(3) {
 		left: 7%;
 		top: 77%;
 		opacity: 0.5;
