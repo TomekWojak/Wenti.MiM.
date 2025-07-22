@@ -192,7 +192,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	allImages.forEach((img) =>
 		img.addEventListener("click", () => {
 			const src = img.getAttribute("src");
+			const alt = img.getAttribute("alt");
 			popupImg.setAttribute("src", src);
+			popupImg.setAttribute("alt", alt);
 			showPopup();
 		})
 	);
