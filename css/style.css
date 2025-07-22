@@ -278,19 +278,31 @@
 
 .contact__small-box {
   position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 3em 2em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.082);
   overflow: hidden;
   z-index: 0;
 }
 .contact__small-box--conditioning {
-  background-color: #5a83bf;
+  background-image: url("../images/webp/12CH35AEHI+white_details_09.webp");
 }
 .contact__small-box--recuperation {
   background-color: var(--accentBlue);
 }
 .contact__small-box--water {
   background-color: #427ed5;
+}
+.contact__small-box::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.3));
+  z-index: -1;
 }
 
 .contact__box-bg-shape {
@@ -778,25 +790,25 @@ input[type=checkbox].agreement-input:focus-visible {
     animation: rotateLeft 50s infinite;
   }
   .pattern-bg:first-child {
-    top: 69%;
+    top: 74%;
     left: 4em;
     opacity: 0.6;
     animation: upAndDown 3s infinite alternate;
   }
   .pattern-bg:nth-child(2) {
-    top: 66%;
+    top: 70%;
     right: 18%;
     transform: scale(0.7);
   }
   .pattern-bg:nth-child(3) {
-    top: 85%;
-    left: 58%;
+    top: 87%;
+    left: 65%;
     width: 30px;
     animation: bgAnimation 10s infinite alternate;
   }
   .pattern-bg:nth-child(4) {
     width: 45px;
-    top: 53%;
+    top: 60%;
     left: 45%;
     opacity: 0.8;
   }
@@ -1723,6 +1735,14 @@ nav {
 .recuperation__text--top a:hover,
 .water__text--top a:hover {
   text-decoration: underline;
+}
+.conditioning__conditioner,
+.recuperation__conditioner,
+.water__conditioner {
+  display: block;
+  width: min(100%, 650px);
+  max-width: 100%;
+  margin-block-start: 2em;
 }
 .conditioning__box-img,
 .recuperation__box-img,
