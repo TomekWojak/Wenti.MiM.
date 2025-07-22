@@ -219,3 +219,11 @@
 		transform: translate(-50%, -45%);
 	}
 }
+@keyframes showPopup {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

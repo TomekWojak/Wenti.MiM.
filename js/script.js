@@ -116,7 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	const allImages = document.querySelectorAll(".gallery__img");
 	const nextBtn = document.querySelector(".gallery__btn--next");
 	const prevBtn = document.querySelector(".gallery__btn--prev");
-
+	const popup = document.querySelector(".gallery__popup");
+	const popupImg = popup.querySelector(".gallery__popup-img");
+	const closePopupBtn = popup.querySelector(".gallery__close-popup");
 	let index = 1;
 	let step;
 	let width;
@@ -173,12 +175,28 @@ document.addEventListener("DOMContentLoaded", function () {
 		imagesBox.style.transform = `translateX(${-width}%)`;
 	};
 
+	const showPopup = () => {
+		popup.classList.toggle("active");
+		document.body.classList.toggle("popup-active");
+	};
 	window.addEventListener("resize", () => {
 		step = window.innerWidth >= 900 ? 33.33 : 100;
 		width = (index - 1) * step;
 		imagesBox.style.transform = `translateX(${-width}%)`;
 	});
-
+	popup.addEventListener("click", (e) => {
+		if (e.target === popup) {
+			showPopup();
+		}
+	});
+	allImages.forEach((img) =>
+		img.addEventListener("click", () => {
+			const src = img.getAttribute("src");
+			popupImg.setAttribute("src", src);
+			showPopup();
+		})
+	);
+	closePopupBtn.addEventListener("click", showPopup);
 	turnOnDisabled();
 	prevBtn.addEventListener("click", showPrevSlide);
 	nextBtn.addEventListener("click", showNextSlide);
