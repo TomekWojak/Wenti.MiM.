@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" href="/images/WentiMiM-apple-touch-icon.png">
     <title>Wenti.MiM – Klimatyzacja Łańcut, Rzeszów – Montaż i Doradztwo</title>
     <script src="/js/subpage-script.js" defer></script>
-    <link rel="stylesheet" href="/css/style.css?v=7">
+    <link rel="stylesheet" href="/css/style.css?v=9">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -98,7 +98,7 @@
     </header>
     <main>
 
-        <section class="conditioning">
+        <section class="conditioning" aria-labelledby="conditioning-title">
             <div class="conditioning__content wrapper">
                 <img width="424" height="428" src="/images/webp/pattern.webp" loading="lazy" alt="" class="pattern-bg">
                 <img width="424" height="428" src="/images/webp/pattern.webp" loading="lazy" alt="" class="pattern-bg">
@@ -111,7 +111,7 @@
                     bezpośrednio na e-mail i uzyskaj darmową wycenę.</p>
                 <div class="conditioning__box">
                     <div class="conditioning__box-info">
-                        <h2 class="conditioning__title">Co to jest klimatyzacja?</h2>
+                        <h2 class="conditioning__title" id="conditioning-title">Co to jest klimatyzacja?</h2>
                         <div class="blue-line"></div>
                         <p class="conditioning__text">Klimatyzacja to system, który pozwala na utrzymanie optymalnej
                             temperatury i wilgotności powietrza w pomieszczeniach, niezależnie od warunków zewnętrznych.
@@ -206,9 +206,10 @@
                 </div>
             </div>
         </section>
-        <section class="questions conditioning__questions">
+        <section class="questions conditioning__questions" aria-labelledby="conditioning-accordion-title">
             <div class="questions__content wrapper">
-                <h5 class="conditioning__title conditioning__title--accordion">Klimatyzacja - najczęstsze pytania</h5>
+                <h5 class="conditioning__title conditioning__title--accordion" id="conditioning-accordion-title">
+                    Klimatyzacja - najczęstsze pytania</h5>
                 <div class="questions__accordion">
                     <div class="questions__accordion-box">
 

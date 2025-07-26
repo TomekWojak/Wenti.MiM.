@@ -1373,7 +1373,6 @@ nav {
 }
 .gallery__btn.disabled {
   opacity: 0.2;
-  cursor: not-allowed;
 }
 .gallery__btn--next {
   right: -3.5em;

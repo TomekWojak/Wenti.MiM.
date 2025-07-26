@@ -28,7 +28,7 @@
     <link rel="apple-touch-icon" href="/images/WentiMiM-apple-touch-icon.png">
     <title>Wenti.MiM – Instalacja hydrauliczna i ogrzewanie podłogowe</title>
     <script src="/js/subpage-script.js" defer></script>
-    <link rel="stylesheet" href="/css/style.css?v=7">
+    <link rel="stylesheet" href="/css/style.css?v=9">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -95,9 +95,9 @@
         </div>
     </header>
     <main>
-        <section class="water">
+        <section class="water" aria-labelledby="water-title">
             <div class="water__content wrapper">
-                <h2 class="water__title">Czym jest instalacja hydrauliczna?</h2>
+                <h2 class="water__title" id="water-title">Czym jest instalacja hydrauliczna?</h2>
                 <div class="blue-line"></div>
                 <p class="water__text">Instalacja hydrauliczna to system rur, zaworów i urządzeń odpowiedzialny za
                     doprowadzanie wody do budynku oraz odprowadzanie ścieków. Obejmuje także instalacje grzewcze, takie
@@ -192,9 +192,10 @@
 
             </div>
         </section>
-        <section class="questions water__questions">
+        <section class="questions water__questions" aria-labelledby="water-accordion-title">
             <div class="questions__content wrapper">
-                <h5 class="water__title water__title--accordion">Instalacja hydrauliczna - najczęstsze pytania</h5>
+                <h5 class="water__title water__title--accordion" id="water-accordion-title">Instalacja hydrauliczna -
+                    najczęstsze pytania</h5>
                 <div class="questions__accordion">
                     <div class="questions__accordion-box">
 
