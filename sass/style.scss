@@ -1033,13 +1033,13 @@ nav {
 .privacy-policy {
 	position: relative;
 	padding: 7em 2em 12em;
+	color: var(--graphite);
 	&-bottom-bg {
 		transform: rotate(180deg);
 		bottom: -5px;
 	}
 	&__title {
 		font-size: clamp(1.75rem, 3.4vw, 2.2rem);
-		color: var(--graphite);
 		margin-block-end: 0.8em;
 	}
 	&__info {
@@ -1049,6 +1049,28 @@ nav {
 	&__info:not(.privacy-policy__info-mid),
 	&__info:is(.privacy-policy__info-mid):nth-child(4) {
 		margin-block-end: 2em;
+	}
+}
+
+.not-found {
+	position: relative;
+	&__content {
+		text-align: center;
+		padding: 10em 2em;
+
+		color: var(--graphite);
+	}
+	&__title {
+		font-size: clamp(2.4rem, 5vw, 5.5rem);
+	}
+	&__info {
+		margin-block-start: 2em;
+		font-size: clamp(1.35rem, 2.5vw, 2rem);
+		line-height: 170%;
+	}
+	&-bottom-bg {
+		transform: rotate(180deg);
+		bottom: -5px;
 	}
 }
 
@@ -1134,7 +1156,7 @@ nav {
 			height: 400px;
 		}
 	}
-	.privacy-policy {
+	.privacy-policy, .not-found__content {
 		padding: 10em 2em 15em;
 	}
 	.conditioning__questions,
@@ -1142,6 +1164,7 @@ nav {
 	.water__questions {
 		padding: 5em 2em 18em;
 	}
+
 }
 @media (700px <= width) {
 	.recuperation {
@@ -1337,7 +1360,7 @@ nav {
 			margin: 6em 0 10em;
 		}
 	}
-	.privacy-policy {
+	.privacy-policy, .not-found__content {
 		padding: 12em 4em 20em;
 
 		&__info:not(.privacy-policy__info-mid),
@@ -1881,7 +1904,7 @@ nav {
 			margin-block-start: 2em;
 		}
 	}
-	.privacy-policy {
+	.privacy-policy, .not-found__content {
 		padding: 15em 4em 30em;
 	}
 }
