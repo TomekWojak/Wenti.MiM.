@@ -385,8 +385,7 @@
 .contact__small-box-bg-img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .footer-bottom-bg {
@@ -451,8 +450,7 @@
   font-size: clamp(3.4rem, 10vw, 6.5rem);
   font-weight: 800;
   background: var(--lightTextGradient);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 .form-section__info {
@@ -507,8 +505,7 @@
   border-radius: 3px;
   font-weight: 500;
   font-size: 1rem;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   color: var(--graphite);
 }
 
@@ -576,7 +573,6 @@ label:not(.agreement-label, .options-label) {
 
 .options-label {
   position: relative;
-  min-width: -moz-fit-content;
   min-width: fit-content;
   display: inline-flex;
   align-items: center;
@@ -608,8 +604,7 @@ label:not(.agreement-label, .options-label) {
   font-size: clamp(1.1rem, 3vw, 1.3rem);
   border: 1px solid rgb(185, 185, 185);
   font-weight: 500;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   color: var(--graphite);
 }
 
@@ -1033,8 +1028,7 @@ nav {
   min-height: 180px;
   font-weight: 800;
   background: var(--lightTextGradient);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   max-width: 500px;
   color: transparent;
 }
@@ -1080,8 +1074,7 @@ nav {
 .header__reviews-btn {
   margin-inline-start: 0.8em;
   background-color: rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 .header__reviews-btn:hover {
   transform: translateY(-1px);
@@ -1112,8 +1105,7 @@ nav {
   font-size: var(--bigTextSize);
   font-weight: 800;
   background: var(--darkTextGradient);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
   max-width: 500px;
 }
@@ -1185,8 +1177,7 @@ nav {
   color: var(--pureBlack);
   font-weight: 600;
   background-color: rgba(230, 240, 255, 0.45);
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-top: 5px solid var(--accentBlue);
   border-radius: 10px;
@@ -1247,8 +1238,7 @@ nav {
   font-size: clamp(8rem, 10vw, 10rem);
   font-weight: 900;
   background: var(--lightTextGradient);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
   opacity: 0;
   letter-spacing: 3px;
@@ -1289,8 +1279,7 @@ nav {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   z-index: 1000;
 }
 .gallery__popup.active {
@@ -1313,8 +1302,7 @@ nav {
   display: block;
   width: 90%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   aspect-ratio: 4/3;
   border-radius: 8px;
 }
@@ -1324,8 +1312,7 @@ nav {
   font-weight: 800;
   text-align: center;
   background: var(--lightTextGradient);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 .gallery__content {
@@ -1349,8 +1336,7 @@ nav {
   width: 100%;
   flex-shrink: 0;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 25px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   filter: brightness(0.8);
@@ -1454,8 +1440,7 @@ nav {
   font-size: var(--bigTextSize);
   font-weight: 800;
   background: var(--lightTextGradient);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 .contact__box-placeholder {
@@ -1666,7 +1651,6 @@ nav {
 }
 .footer__area {
   margin: 1.5em 0;
-  width: -moz-fit-content;
   width: fit-content;
   padding: 1.3em;
   min-width: 100px;
@@ -1895,8 +1879,7 @@ nav {
 .recuperation__img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .recuperation__box--bottom {
   margin-block-end: 10em;
@@ -1919,8 +1902,7 @@ nav {
 }
 .water__img--bottom {
   max-height: 550px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .privacy-policy {
@@ -2427,8 +2409,7 @@ nav {
     max-width: 300px;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(15px);
-            backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.1);
     animation: pulsing 3s cubic-bezier(0.22, 0.68, 0, 1.71) infinite alternate;
@@ -2586,8 +2567,7 @@ nav {
     display: block;
     width: 900px;
     height: 600px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-radius: 8px;
   }
   .questions__accordion-box {
@@ -2663,8 +2643,7 @@ nav {
   }
   .conditioning__img {
     min-height: 403px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .conditioning__img.mobile-visible {
     display: none;
@@ -2694,8 +2673,7 @@ nav {
   }
   .water__img--top {
     min-height: 600px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .water__text-container--top {
     width: 50%;

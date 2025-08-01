@@ -184,13 +184,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	};
 
+	let sending = false;
 	const checkErrors = () => {
 		const allInputs = document.querySelectorAll(".form-box");
 		const hasError = Array.from(allInputs).some((el) =>
 			el.classList.contains("error")
 		);
 
+		if (sending) return;
+
 		if (!hasError) {
+			sending = true;
 			document.querySelector(".contact-form").submit();
 		}
 	};
