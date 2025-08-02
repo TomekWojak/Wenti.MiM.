@@ -37,10 +37,59 @@
   "image": "https://wentimim.pl/images/WentiMiM-og-logo.png",
   "url": "https://wentimim.pl/rekuperacja",
   "description": "Rekuperacja dla domów i firm – instalacja, projekt, serwis. Działamy w Rzeszowie, Łańcucie i Przeworsku.",
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": ["Łańcut", "Rzeszów", "Przeworsk"]
-  }
+  "areaServed": [
+  { "@type": "Place", "name": "Łańcut" },
+  { "@type": "Place", "name": "Rzeszów" },
+  { "@type": "Place", "name": "Przeworsk" }
+]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ile prądu pobiera rekuperacja?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "System rekuperacji, czyli wentylacji mechanicznej z odzyskiem ciepła, zużywa stosunkowo niewiele energii elektrycznej. Średnie zużycie prądu przez rekuperator waha się od 0,5 do 2 kWh na dobę, w zależności od modelu rekuperatora, jego wydajności, także ustawień pracy. Przekłada się to na miesięczne zużycie energii w granicach 15–60 kWh, co przy aktualnych cenach prądu daje koszt rzędu 15 do 60 zł miesięcznie. Warto zaznaczyć, że nowoczesne rekuperatory są projektowane z myślą o energooszczędności. Posiadają energooszczędne silniki EC z możliwością dostosowania pracy do aktualnych warunków w domu, co pozwala na jeszcze większą optymalizację zużycia prądu. Dodatkowo, mimo niewielkiego poboru energii elektrycznej, rekuperacja znacząco wpływa na obniżenie kosztów ogrzewania, ponieważ odzyskuje ciepło z powietrza wywiewanego z budynku."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jak często powinno się wymieniać filtry w rekuperatorze?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Filtry w rekuperatorze powinno się wymieniać regularnie — zazwyczaj co 3 do 6 miesięcy. Częstotliwość wymiany zależy od kilku czynników, takich jak lokalne warunki powietrza (np. obecność smogu, pyłu, alergenów), typ zastosowanego filtra oraz intensywność użytkowania systemu rekuperacji. Zaniedbanie regularnej wymiany filtrów może prowadzić do spadku wydajności rekuperatora, zwiększonego zużycia energii elektrycznej przy jednoczesnym pogorszeniu jakości powietrza wewnętrznego. W skrajnych przypadkach może dojść nawet do uszkodzenia rekuperatora. Dlatego warto kontrolować stan filtrów co kilka tygodni i wymieniać je zgodnie z zaleceniami producenta lub częściej, jeśli system działa w szczególnie zapylonym środowisku. Regularna wymiana filtrów w systemie rekuperacji to nie tylko dbałość o urządzenie, ale przede wszystkim o zdrowie domowników i jakość powietrza w pomieszczeniach."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy rekuperacja jest głośna?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nowoczesny system rekuperacji pracuje bardzo cicho. W pomieszczeniach mieszkalnych dźwięk działania rekuperatora jest zazwyczaj niesłyszalny lub porównywalny z szumem lodówki. Komfort akustyczny zapewniają m.in. ciche wentylatory, odpowiednia izolacja kanałów oraz zastosowanie tłumików akustycznych. W efekcie rekuperacja nie zakłóca codziennego funkcjonowania i nie wpływa negatywnie na jakość snu czy odpoczynku."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gdzie najlepiej umieścić rekuperator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rekuperator najlepiej zamontować w pomieszczeniu technicznym, takim jak kotłownia, pralnia, garaż czy specjalna część pomieszczenia gospodarczego. Popularnym rozwiązaniem jest także montaż na poddaszu, szczególnie w domach jednorodzinnych. Miejsce instalacji rekuperatora powinno być łatwo dostępne do serwisowania i wymiany filtrów, a jednocześnie zapewniać odpowiednią wentylację i izolację akustyczną. Dobór lokalizacji zależy od układu budynku i długości tras kanałów wentylacyjnych – im krótsze, tym lepiej dla sprawności systemu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy rekuperacja jest odpowiednia dla każdego domu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tak, system rekuperacji można z powodzeniem zastosować zarówno w nowych budynkach, jak i w domach modernizowanych. W przypadku nowego budownictwa instalację rekuperacji z odzyskiem ciepła można zaplanować już na etapie projektu, co pozwala na optymalne rozprowadzenie kanałów i dopasowanie parametrów urządzenia. W domach już istniejących również możliwe jest wdrożenie rekuperacji – wymaga to jednak indywidualnego podejścia i dopasowania instalacji do układu pomieszczeń."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -186,7 +235,8 @@
         </section>
         <section class="questions recuperation__questions" aria-labelledby="recuperation-accordion-title">
             <div class="questions__content wrapper">
-                <h5 class="recuperation__title recuperation__title--accordion" id="recuperation-accordion-title">Rekuperacja - najczęstsze pytania</h5>
+                <h5 class="recuperation__title recuperation__title--accordion" id="recuperation-accordion-title">
+                    Rekuperacja - najczęstsze pytania</h5>
                 <div class="questions__accordion">
                     <div class="questions__accordion-box">
 
