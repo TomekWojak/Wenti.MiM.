@@ -140,8 +140,10 @@ nav {
 		font-weight: 800;
 		background: var(--lightTextGradient);
 		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 		max-width: 500px;
-		color: transparent;
+		color: var(--pureWhite);
 
 		&:last-child {
 			background-image: linear-gradient(270deg, #bfdbfe, #ffffff);
@@ -212,7 +214,9 @@ nav {
 		font-weight: 800;
 		background: var(--darkTextGradient);
 		background-clip: text;
-		color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: var(--pureBlack);
 		max-width: 500px;
 	}
 	&__title:last-child {
@@ -354,7 +358,9 @@ nav {
 		font-weight: 900;
 		background: var(--lightTextGradient);
 		background-clip: text;
-		color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: var(--pureWhite);
 		opacity: 0;
 		letter-spacing: 3px;
 		transition: opacity 0.7s;
@@ -435,7 +441,9 @@ nav {
 		text-align: center;
 		background: var(--lightTextGradient);
 		background-clip: text;
-		color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: var(--pureWhite);
 	}
 	&__content {
 		width: 90%;
@@ -570,7 +578,9 @@ nav {
 		font-weight: 800;
 		background: var(--lightTextGradient);
 		background-clip: text;
-		color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: var(--pureWhite);
 	}
 	&__box-placeholder {
 		display: none;
@@ -1156,7 +1166,8 @@ nav {
 			height: 400px;
 		}
 	}
-	.privacy-policy, .not-found__content {
+	.privacy-policy,
+	.not-found__content {
 		padding: 10em 2em 15em;
 	}
 	.conditioning__questions,
@@ -1164,7 +1175,6 @@ nav {
 	.water__questions {
 		padding: 5em 2em 18em;
 	}
-
 }
 @media (700px <= width) {
 	.recuperation {
@@ -1360,7 +1370,8 @@ nav {
 			margin: 6em 0 10em;
 		}
 	}
-	.privacy-policy, .not-found__content {
+	.privacy-policy,
+	.not-found__content {
 		padding: 12em 4em 20em;
 
 		&__info:not(.privacy-policy__info-mid),
@@ -1904,7 +1915,8 @@ nav {
 			margin-block-start: 2em;
 		}
 	}
-	.privacy-policy, .not-found__content {
+	.privacy-policy,
+	.not-found__content {
 		padding: 15em 4em 30em;
 	}
 }

@@ -268,7 +268,9 @@
 		font-weight: 800;
 		background: var(--lightTextGradient);
 		background-clip: text;
-		color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: var(--pureWhite);
 	}
 	&__info {
 		color: rgba(255, 255, 255, 0.8);
