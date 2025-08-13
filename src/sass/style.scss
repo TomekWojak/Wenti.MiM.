@@ -850,13 +850,13 @@ nav {
 		z-index: 0;
 
 		&-conditioning {
-			background-image: url("../images/webp/Conditioning-bg.webp");
+			background-image: url("../../images/webp/Conditioning-bg.webp");
 		}
 		&-recuperation {
-			background-image: url("../images/webp/recuperation-bg.webp");
+			background-image: url("../../images/webp/recuperation-bg.webp");
 		}
 		&-water {
-			background-image: url("../images/webp/water-section-img.webp");
+			background-image: url("../../images/webp/water-section-img.webp");
 		}
 
 		&::before {
@@ -967,10 +967,10 @@ nav {
 		background-size: cover;
 
 		&--top {
-			background-image: url("../images/webp/air-conditioning-woman-mobile-blurred.webp");
+			background-image: url("../../images/webp/air-conditioning-woman-mobile-blurred.webp");
 		}
 		&--bottom {
-			background-image: url("../images/webp/air-conditioning-repairing-blurred.webp");
+			background-image: url("../../images/webp/air-conditioning-repairing-blurred.webp");
 
 			&-rec {
 				background-image: none;
@@ -1000,7 +1000,7 @@ nav {
 		height: 300px;
 
 		&--top {
-			background-image: url("../images/webp/recuperation-img-blurred.webp");
+			background-image: url("../../images/webp/recuperation-img-blurred.webp");
 		}
 	}
 	&__img {
@@ -1024,13 +1024,13 @@ nav {
 	}
 
 	&__img-container--top {
-		background-image: url("../images/webp/water-img-blurred.webp");
+		background-image: url("../../images/webp/water-img-blurred.webp");
 	}
 	&__img-desktop-visible {
 		display: none;
 	}
 	&__img-container--bottom {
-		background-image: url("../images/webp/water-bg-blurred.webp");
+		background-image: url("../../images/webp/water-bg-blurred.webp");
 	}
 	&__img--bottom {
 		max-height: 550px;
@@ -1861,7 +1861,7 @@ nav {
 			max-width: 350px;
 
 			&--top {
-				background-image: url("../images/webp/air-conditioning-woman-blurred.webp");
+				background-image: url("../../images/webp/air-conditioning-woman-blurred.webp");
 			}
 			&--bottom {
 				order: 1;
