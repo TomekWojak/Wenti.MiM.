@@ -1,13 +1,9 @@
 @keyframes left {
 	from {
-		left: -20%;
-		top: -45%;
-		transform: rotate(20deg);
+		left: -100%;
 	}
 	to {
-		left: 150%;
-		top: -45%;
-		transform: rotate(20deg);
+		left: 100%;
 	}
 }
 @keyframes upAndDown {

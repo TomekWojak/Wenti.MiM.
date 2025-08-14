@@ -1447,7 +1447,7 @@ nav {
 				@include btnShiningElement;
 			}
 			&:hover::before {
-				animation: left 0.4s 0.1s forwards;
+				animation: left 0.4s 0.1s;
 			}
 		}
 	}
