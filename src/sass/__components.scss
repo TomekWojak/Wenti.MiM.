@@ -357,16 +357,18 @@ input[type="email"].not-empty + label {
 	font-size: 1rem;
 }
 
-label {
-	font-size: clamp(1.1rem, 3vw, 1.3rem);
-}
-label:not(.agreement-label, .options-label) {
-	position: absolute;
-	left: 1em;
-	top: 50%;
-	transform: translateY(-50%);
-	pointer-events: none;
-	transition: transform 0.3s, background-color 0.3s, font-size 0.3s;
+.contact-form {
+	label {
+		font-size: clamp(1.1rem, 3vw, 1.3rem);
+	}
+	label:not(.agreement-label, .options-label) {
+		position: absolute;
+		left: 1em;
+		top: 50%;
+		transform: translateY(-50%);
+		pointer-events: none;
+		transition: transform 0.3s, background-color 0.3s, font-size 0.3s;
+	}
 }
 .contact-form-box-error,
 .contact-form-box-question-error {
