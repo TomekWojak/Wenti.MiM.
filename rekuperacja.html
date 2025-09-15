@@ -32,7 +32,7 @@
     <link rel="apple-touch-icon" href="/images/WentiMiM-apple-touch-icon.png">
     <title>Wenti.MiM – Montaż rekuperacji i wentylacji w Przeworsku</title>
     <link rel="stylesheet" href="/dist/css/style.min.css">
-    <script src="/dist/js/subpage-script.min.js" defer></script>
+    <script type="module" src="/dist/js/subpage-script.min.js" defer></script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -120,7 +120,51 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZGSR3QH" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <div class="msg-status">
+        <p class="msg-status__info">test</p>
+    </div>
+    <div class="contact__popup">
+        <div class="contact__popup-header">
+            <p class="contact__popup-title">Napisz do nas – przygotujemy bezpłatną wycenę.</p>
+            <button class="contact__popup-close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg></button>
+        </div>
+        <div class="contact__popup-body">
+            <div class="contact__popup-info">
+                <p class="contact__popup-text">W celu uzyskania szczegółowej wyceny zachęcamy do podania adresu
+                    email
+                    lub numeru telefonu, oraz zaznaczenia jednej z trzech kategorii, a nasz specialista skontaktuje
+                    się
+                    z Państwem najszybciej jak to możliwe. Mogą to państwo zrobić również później, klikając w sekcję
+                    <b>kontakt</b>.
+                </p>
+                <p class="contact__popup-text">Zachęcamy również do zapoznania się z naszą <a
+                        href="polityka-prywatnosci.html">polityką przetwarzania danych</a></p>
 
+                <form class="contact__popup-form">
+                    <input type="radio" name="contact-popup" id="air-condition" class="contact__popup-radio">
+                    <label for="air-condition" class="contact__popup-label">Klimatyzacja</label>
+
+                    <input type="radio" name="contact-popup" id="recuperation" class="contact__popup-radio">
+                    <label for="recuperation" class="contact__popup-label">Rekuperacja</label>
+
+                    <input type="radio" name="contact-popup" id="instalation" class="contact__popup-radio">
+                    <label for="instalation" class="contact__popup-label">Instalcja hydrauliczna</label>
+
+                    <input type="text" class="contact__popup-input" placeholder="Podaj email lub tel">
+                    <button class="contact__input-send-btn">Skontaktuj się z nami</button>
+                    <p class="contact__popup-error">error</p>
+            </div>
+            </form>
+            <div class="contact__popup-img">
+                <img src="/images/webp/contact-popup-img.webp" alt="">
+            </div>
+        </div>
+    </div>
     <header class="header header__recuperation">
         <div class="header-top-content">
             <div class="header-top-content-wrapper">
@@ -436,7 +480,7 @@
                         alt="Logo firmy Wenti MiM">
                 </a>
                 <ul class="footer__list">
-                    <li class="footer__list-item"><a href="kontakt.html" class="footer__link">Kontakt</a></li>
+                    <li class="footer__list-item"><a class="footer__link">Kontakt</a></li>
                     <li class="footer__list-item"><a href="klimatyzacja.html" class="footer__link">Klimatyzacja</a></li>
                     <li class="footer__list-item"><a href="rekuperacja.html" class="footer__link">Rekuperacja</a></li>
                     <li class="footer__list-item"><a href="instalacja-hydrauliczna.html" class="footer__link">Instalacja

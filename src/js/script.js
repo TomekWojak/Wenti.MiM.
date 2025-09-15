@@ -1,10 +1,11 @@
+import { initContactPopupFunction } from "./contact.min.js";
 document.addEventListener("DOMContentLoaded", function () {
 	const handleFooterYear = () => {
 		const currentYear = new Date().getFullYear();
 		document.querySelector(".footer__year").textContent = currentYear;
 	};
 	handleFooterYear();
-
+	initContactPopupFunction()
 	// SECTiON ANIMATIONS
 	const sectionOptions = {
 		rootMargin: "-200px",

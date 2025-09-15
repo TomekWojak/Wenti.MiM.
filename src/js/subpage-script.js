@@ -1,10 +1,12 @@
+import { initContactPopupFunction } from "./contact.min.js";
+
 document.addEventListener("DOMContentLoaded", function () {
 	const handleFooterYear = () => {
 		const currentYear = new Date().getFullYear();
 		document.querySelector(".footer__year").textContent = currentYear;
 	};
 	handleFooterYear();
-
+	initContactPopupFunction();
 	// HANDLE BACK TO TOP
 
 	const backToTopArrowBtn = document.querySelector(".back-to-top");
