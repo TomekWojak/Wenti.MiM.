@@ -566,63 +566,11 @@ nav {
 	}
 }
 
-// CONTACT SECTION
-
-.contact {
-	background: linear-gradient(180deg, var(--contactDark), var(--contactLight));
-
-	&__box {
-		padding: 6em 2em;
-	}
-	&__title {
-		font-size: var(--bigTextSize);
-		font-weight: 800;
-		background: var(--lightTextGradient);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		color: var(--pureWhite);
-	}
-	&__box-placeholder {
-		display: none;
-	}
-	&__info {
-		margin-block-start: 1em;
-		font-size: clamp(1.3rem, 2.8vw, 1.6rem);
-		color: rgba(255, 255, 255, 0.8);
-		line-height: 150%;
-		max-width: 500px;
-		min-height: 70px;
-	}
-	&__btn {
-		@include ctaBtn;
-		background: linear-gradient(90deg, var(--btnBLue), var(--btnPurple) 80%);
-		margin-block-start: 1em;
-
-		&:hover {
-			transform: translateY(-1px);
-			background-size: 250%;
-			background-position: right center;
-			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-		}
-		&:hover .contact__cta-arrow {
-			transform: translateX(2px);
-		}
-	}
-	&__cta-arrow {
-		display: inline-block;
-		width: 10px;
-		margin-inline-start: 0.5em;
-		vertical-align: middle;
-		transition: transform 0.3s 0.1s;
-	}
-}
-
 // MAP SECTION
 .location {
 	position: relative;
 	padding: 10em 2em 12em;
-	background-color: #f1eeee;
+	background-color: #f7f7f7;
 	z-index: 0;
 
 	.location-top-bg {
@@ -1337,11 +1285,6 @@ nav {
 			margin: 0 auto;
 		}
 	}
-	.contact {
-		&__box {
-			padding: 6em 4em;
-		}
-	}
 	.location {
 		padding: 15em 4em 20em;
 	}
@@ -1595,95 +1538,9 @@ nav {
 			}
 		}
 	}
-	.contact {
-		&__box {
-			display: flex;
-			justify-content: space-between;
-			align-items: stretch;
-		}
-		&__info {
-			line-height: 160%;
-		}
-		&__btn {
-			position: relative;
-			overflow: hidden;
-			margin-block-start: 1.5em;
 
-			&::before {
-				@include btnShiningElement;
-			}
-			&:hover::before {
-				animation: left 0.5s 0.1s forwards;
-			}
-		}
-		&__box-text {
-			width: 100%;
-		}
-		&__box-placeholder {
-			position: relative;
-			display: block;
-			width: 100%;
-			z-index: 0;
-		}
-		&__box-bg {
-			display: flex;
-			flex-direction: column;
-			gap: 2em;
-			padding: 2em;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 75%;
-			max-width: 300px;
-			height: 100%;
-			background-color: rgba(255, 255, 255, 0.1);
-			backdrop-filter: blur(15px);
-			border-radius: 10px;
-			border: 2px solid rgba(255, 255, 255, 0.1);
-			animation: pulsing 3s cubic-bezier(0.22, 0.68, 0, 1.71) infinite alternate;
-		}
-		&__box-middleSize-bar {
-			width: 100%;
-			height: 15%;
-			@include contactPlaceholderBar;
-			animation: opacity 3s infinite alternate;
-			animation-delay: 0.2s;
-		}
-		&__box-middleSize-bar:last-child {
-			animation-delay: 1.4s;
-		}
-		&__box-bigSize-bar {
-			width: 100%;
-			height: 40%;
-			@include contactPlaceholderBar;
-			animation: opacity 3s infinite alternate;
-			animation-delay: 0.6s;
-		}
-		&__box-smallSize-container {
-			width: 100%;
-			height: 10%;
-			display: flex;
-			justify-content: space-between;
-			animation: opacity 3s infinite alternate;
-			animation-delay: 1s;
-		}
-		&__box-smallSize-left {
-			width: 10%;
-			height: 100%;
-			@include contactPlaceholderBar;
-			animation: sizingLeft 8s infinite cubic-bezier(0.25, 0.75, 0.5, 1.25)
-				alternate;
-		}
-		&__box-smallSize-right {
-			width: 85%;
-			@include contactPlaceholderBar;
-			animation: sizingRight 8s infinite cubic-bezier(0.25, 0.75, 0.5, 1.25)
-				alternate;
-		}
-	}
 	.location {
-		padding: 20em 6em 20em;
+		padding: 15em 6em 20em;
 
 		&__title {
 			text-align: center;
@@ -1998,14 +1855,9 @@ nav {
 	.reviews {
 		padding: 8em 2em 35em;
 	}
-	.contact {
-		&__box-bg {
-			max-width: 350px;
-			height: 120%;
-		}
-	}
+
 	.location {
-		padding: 35em 6em 15em;
+		padding: 20em 6em 15em;
 	}
 	.questions {
 		padding: 35em 6em;

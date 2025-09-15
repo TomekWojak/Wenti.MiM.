@@ -170,18 +170,22 @@
                 <p class="contact__popup-text">Zachęcamy również do zapoznania się z naszą <a
                         href="polityka-prywatnosci.html">polityką przetwarzania danych</a></p>
 
-                <form class="contact__popup-form">
-                    <input type="radio" name="contact-popup" id="air-condition" class="contact__popup-radio">
-                    <label for="air-condition" class="contact__popup-label">Klimatyzacja</label>
+                <form action="mail.php" method="post" class="contact__popup-form">
+                    <input type="radio" name="contact-popup" id="air-condition" class="contact__popup-radio"
+                        value="Klimatyzacja">
+                    <label for="air-condition" class="contact__popup-label" tabindex="0">Klimatyzacja</label>
 
-                    <input type="radio" name="contact-popup" id="recuperation" class="contact__popup-radio">
-                    <label for="recuperation" class="contact__popup-label">Rekuperacja</label>
+                    <input type="radio" name="contact-popup" id="recuperation" class="contact__popup-radio"
+                        value="Rekuperacja">
+                    <label for="recuperation" class="contact__popup-label" tabindex="0">Rekuperacja</label>
 
-                    <input type="radio" name="contact-popup" id="instalation" class="contact__popup-radio">
-                    <label for="instalation" class="contact__popup-label">Instalcja hydrauliczna</label>
+                    <input type="radio" name="contact-popup" id="instalation" class="contact__popup-radio"
+                        value="Instalacja hydrauliczna">
+                    <label for="instalation" class="contact__popup-label" tabindex="0">Instalacja hydrauliczna</label>
 
-                    <input type="text" class="contact__popup-input" placeholder="Podaj email lub tel">
-                    <button class="contact__input-send-btn">Skontaktuj się z nami</button>
+                    <input type="text" class="contact__popup-input" name="contact__popup-input"
+                        placeholder="Podaj email lub tel">
+                    <button type="submit" class="contact__input-send-btn">Skontaktuj się z nami</button>
                     <p class="contact__popup-error">error</p>
             </div>
             </form>
@@ -734,39 +738,7 @@
             <img width="2115" height="142" loading="lazy" src="/images/svg/reviews-bottom-bg.svg" alt=""
                 class="reviews-bottom-bg section-divider">
         </section>
-        <section class="contact" aria-labelledby="contact-title">
-            <div class="contact__box wrapper">
-                <div class="contact__box-text to-animate">
-                    <h4 class="contact__title" id="contact-title">
-                        Skontaktuj
-                        <p class="contact__title">się z nami</p>
-                    </h4>
-                    <p class="contact__info">Masz pytanie lub potrzebujesz wyceny? Wypełnij krótki formularz – odpowiemy
-                        maksymalnie w ciągu 24 godzin.</p>
-                    <a href="kontakt.html" aria-label="Przycisk kierujący na stronę z formularzem kontaktowym"
-                        class="contact__btn">Wypełnij formularz
-                        <img width="10" height="11" loading="lazy" src="/images/svg/arrow-right-solid.svg" alt=""
-                            class="contact__cta-arrow">
-                    </a>
-                </div>
-                <div class="contact__box-placeholder to-animate">
-                    <div class="contact__box-bg-shape contact__box-bg-shape--green"></div>
-                    <div class="contact__box-bg-shape contact__box-bg-shape--red"></div>
-                    <div class="contact__box-bg">
-                        <div class="contact__box-middleSize-bar contact__box-middleSize-bar--top"></div>
-                        <div class="contact__box-bigSize-bar"></div>
-                        <div class="contact__box-smallSize-container">
-                            <div class="contact__box-smallSize-left"></div>
-                            <div class="contact__box-smallSize-right"></div>
-                        </div>
-                        <div class="contact__box-middleSize-bar contact__box-middleSize-bar--bottom"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="location" aria-labelledby="location-title">
-            <img width="2115" height="142" loading="lazy" src="/images/svg/location-top-bg.svg" alt=""
-                class="location-top-bg section-divider">
             <div class="location__content wrapper to-animate">
                 <h4 class="location__title" id="location-title">Gdzie nas znaleźć?</h4>
                 <div class="location__map">

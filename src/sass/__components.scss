@@ -323,6 +323,10 @@
 		&-close {
 			padding: 0.5em;
 			cursor: pointer;
+
+			svg {
+				pointer-events: none;
+			}
 		}
 		&-input {
 			padding: 1em;
@@ -342,6 +346,10 @@
 			color: #d12000;
 			font-size: 1.4rem;
 			visibility: hidden;
+
+			&.visible {
+				visibility: visible;
+			}
 		}
 	}
 	&__input-send-btn {
@@ -353,6 +361,11 @@
 		font-weight: 500;
 		border-radius: 0.4rem;
 		cursor: pointer;
+
+		&:focus-visible {
+			outline: 2px solid var(--accentBlue);
+			outline-offset: 2px;
+		}
 	}
 }
 
@@ -401,9 +414,11 @@ input[type="radio"]:checked + label.contact__popup-label {
 		&__popup-label {
 			transition: background 0.3s, border-color 0.3s, transform 0.3s;
 
-			&:hover {
+			&:hover,
+			&:focus-visible {
 				background: none;
 				border-color: var(--accentBlue);
+				outline: none;
 			}
 			&:active {
 				transform: scale(0.95);
