@@ -76,18 +76,22 @@
                 <p class="contact__popup-text">Zachęcamy również do zapoznania się z naszą <a
                         href="polityka-prywatnosci.html">polityką przetwarzania danych</a></p>
 
-                <form class="contact__popup-form">
-                    <input type="radio" name="contact-popup" id="air-condition" class="contact__popup-radio">
-                    <label for="air-condition" class="contact__popup-label">Klimatyzacja</label>
+                <form action="mail.php" method="post" class="contact__popup-form">
+                    <input type="radio" name="contact-popup" id="air-condition" class="contact__popup-radio"
+                        value="Klimatyzacja">
+                    <label for="air-condition" class="contact__popup-label" tabindex="0">Klimatyzacja</label>
 
-                    <input type="radio" name="contact-popup" id="recuperation" class="contact__popup-radio">
-                    <label for="recuperation" class="contact__popup-label">Rekuperacja</label>
+                    <input type="radio" name="contact-popup" id="recuperation" class="contact__popup-radio"
+                        value="Rekuperacja">
+                    <label for="recuperation" class="contact__popup-label" tabindex="0">Rekuperacja</label>
 
-                    <input type="radio" name="contact-popup" id="instalation" class="contact__popup-radio">
-                    <label for="instalation" class="contact__popup-label">Instalacja hydrauliczna</label>
+                    <input type="radio" name="contact-popup" id="instalation" class="contact__popup-radio"
+                        value="Instalacja hydrauliczna">
+                    <label for="instalation" class="contact__popup-label" tabindex="0">Instalacja hydrauliczna</label>
 
-                    <input type="text" class="contact__popup-input" placeholder="Podaj email lub tel">
-                    <button class="contact__input-send-btn">Skontaktuj się z nami</button>
+                    <input type="text" class="contact__popup-input" name="contact__popup-input"
+                        placeholder="Podaj email lub tel">
+                    <button type="submit" class="contact__input-send-btn">Skontaktuj się z nami</button>
                     <p class="contact__popup-error">error</p>
             </div>
             </form>

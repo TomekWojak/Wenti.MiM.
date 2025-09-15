@@ -980,9 +980,6 @@ nav {
 		height: 100%;
 		object-fit: cover;
 	}
-	&__box--bottom {
-		margin-block-end: 10em;
-	}
 }
 
 // WATER INSTALATION SECTION
@@ -1585,7 +1582,7 @@ nav {
 		&__box {
 			display: flex;
 			align-items: center;
-			margin: 5em 0 10em;
+			margin: 5em 0 0;
 
 			&--bottom {
 				justify-content: flex-end;
@@ -1738,7 +1735,7 @@ nav {
 
 			&--bottom {
 				justify-content: flex-end;
-				margin: 12em 0 20em;
+				margin: 12em 0 0;
 			}
 		}
 		&__title {
@@ -1785,16 +1782,10 @@ nav {
 		&__box {
 			margin-block-start: 8em;
 		}
-		&__box--bottom {
-			margin-block-end: 20em;
-		}
 	}
 	.water {
 		&__box {
-			margin: 10em 0;
-		}
-		&__box--bottom {
-			margin-block-end: 15em;
+			margin: 10em 0 0;
 		}
 		&__box--top {
 			display: flex;
