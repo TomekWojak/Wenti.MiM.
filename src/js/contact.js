@@ -49,6 +49,9 @@ export const initContactPopupFunction = () => {
 	const closePopup = () => {
 		localStorage.setItem("seen", true);
 		contactPopup.classList.remove("popup-visible");
+		contactFormRadioInputs.forEach((input) => (input.checked = false));
+		contactFormTextInput.value = "";
+		contactFormError.classList.remove("visible");
 	};
 
 	let isSending = false;
